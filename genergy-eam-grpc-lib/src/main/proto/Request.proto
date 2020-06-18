@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package net.gichain.genergy.eam.grpc.lib;
+
+import "google/protobuf/any.proto";
+
+message AssetIdRequest {
+    int32 assetId = 1; // 资产编号
+}

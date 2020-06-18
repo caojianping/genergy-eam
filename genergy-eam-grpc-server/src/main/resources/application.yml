@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: genergy-eam-grpc-server
+
+grpc:
+  server:
+    port: 10001

@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+  output:
+    ansi:
+      enabled: always
+
+datasource:
+  type: com.alibaba.druid.pool.DruidDataSource
+  driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 10000
+
+logging:
+  level.net.gichain.genergy.eam.admin.GenergyEamAdminApplication: info
+  path: logs
+  pattern:
+    console: '%d{yyyy/MM/dd} [%thread] %-5level %logger{50} - %msg%n'
+    file: '%d{yyyy/MM/dd} [%thread] %-5level %logger{50} - %msg%n'

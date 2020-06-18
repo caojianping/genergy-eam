@@ -1,0 +1,13 @@
+server:
+  port: 10002
+spring:
+  application:
+    name: genergy-eam-grpc-client
+
+grpc:
+  client:
+    genergy-eam-grpc-server:
+      address: 'static://127.0.0.1:10001'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext

@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    name: genergy_eam
+    url: jdbc:mysql://47.96.11.15:3306/genergy_eam?setUnicode=true&characterEncoding=utf8
+    username: root
+    password: Cjp_1990

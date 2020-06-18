@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package net.gichain.genergy.eam.grpc.lib;
+
+import "google/protobuf/any.proto";
+
+import "Request.proto";
+import "Result.proto";
+
+// 发电量服务
+service EnergyService {
+    // 获取电站昨日发电量
+    // 使用：桂朝
+    // 响应：Object<{ assetId: String, date: Date, energy: Decimal（目前取并网日发电量） }>
+    // 示例：{ assetId: "123456789", date: "2020-01-01", energy: 15000 }
+    rpc getYesterdayEnergy (net.gichain.genergy.eam.grpc.lib.AssetIdRequest) returns (net.gichain.genergy.eam.grpc.lib.Result) {
+    }
+
+    // 获取发电量走势
+    // 使用：马习文
+    // 响应：List<{ date: Date, energy: Decimal（目前取并网日发电量） }>
+    // 示例：[ { date: "2020-01-01", energy: 15000 }, { date: "2020-01-02", energy: 25000 } ]
+    rpc getEnergyTrend (EnergyTrendRequest) returns (net.gichain.genergy.eam.grpc.lib.Result) {
+    }
+}
+
+message EnergyTrendRequest {
+    int32 assetId = 1; // 资产编号
+    int32 type = 2; // 类型
+}
