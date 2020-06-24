@@ -22,12 +22,12 @@ public class ResponseAdvice implements ResponseBodyAdvice {
 
     @Override
     public Object beforeBodyWrite(Object body, MethodParameter methodParameter, MediaType mediaType, Class aClass, ServerHttpRequest serverHttpRequest, ServerHttpResponse serverHttpResponse) {
+        log.info(String.format("ResponseAdvice.beforeBodyWrite body: %s", body));
         Object result = JsonResult.success(body);
-        log.info(String.format("beforeBodyWrite body: %s", result));
         if (body instanceof String) {
             result = JSON.toJSONString(result);
         }
-        log.info(String.format("beforeBodyWrite result: %s", result));
+        log.info(String.format("ResponseAdvice.beforeBodyWrite result: %s", result));
         return result;
     }
 }

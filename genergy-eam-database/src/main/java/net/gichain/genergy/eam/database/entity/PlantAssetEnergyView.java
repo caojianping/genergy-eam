@@ -1,8 +1,9 @@
 package net.gichain.genergy.eam.database.entity;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.io.Serializable;
+import java.util.Date;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -12,7 +13,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author cjp
- * @since 2020-06-18
+ * @since 2020-06-19
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -23,7 +24,7 @@ public class PlantAssetEnergyView implements Serializable {
     /**
      * 电站编号
      */
-    private String plantId;
+    private String id;
 
     /**
      * 资产编号
@@ -38,7 +39,7 @@ public class PlantAssetEnergyView implements Serializable {
     /**
      * 发电日期
      */
-    private LocalDate date;
+    private Date date;
 
     /**
      * 实际日发电量，单位kWh

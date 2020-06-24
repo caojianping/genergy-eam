@@ -4,8 +4,6 @@ option java_multiple_files = true;
 
 package net.gichain.genergy.eam.grpc.lib;
 
-import "google/protobuf/any.proto";
-
 import "Request.proto";
 import "Result.proto";
 
@@ -13,7 +11,7 @@ import "Result.proto";
 service PlantService {
     // 获取电站上网电价
     // 使用：桂朝
-    // 响应：Object<{ assetId: String, date: Date, electricityPrice: Decimal }>
+    // 响应：Object<{ assetId: String, date: String, electricityPrice: Decimal }>
     // 示例：{ assetId: "123456789", date: "2020-01-01", electricityPrice: 0.52 }
     rpc getElectricityPrice (net.gichain.genergy.eam.grpc.lib.AssetIdRequest) returns (net.gichain.genergy.eam.grpc.lib.Result) {
     }

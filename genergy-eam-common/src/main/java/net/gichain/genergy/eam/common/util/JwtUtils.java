@@ -8,15 +8,15 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.extern.slf4j.Slf4j;
-import net.gichain.genergy.eam.common.constants.CommonConstant;
+import net.gichain.genergy.eam.common.constant.CommonConstants;
 import net.gichain.genergy.eam.common.enums.CodeEnum;
-import net.gichain.genergy.eam.common.exceptions.TokenException;
+import net.gichain.genergy.eam.common.exception.TokenException;
 
 @Slf4j
 public class JwtUtils {
-    private static final String USER_ID = "USER_ID";
+    private static final String USER_ID = "id";
     private static final String SECRET = "WgtqaT1HNTZPZNMDJu3k";
-    private static final long EXPIRATION = CommonConstant.JWT_EXPIRATION;
+    private static final long EXPIRATION = CommonConstants.JWT_EXPIRATION;
 
     /**
      * 创建token（根据用户编号）
@@ -68,6 +68,7 @@ public class JwtUtils {
         } catch (Exception exception) {
             throw new TokenException(CodeEnum.TOKEN_ANALYSIS_ERROR);
         }
+        log.info(String.format("JwtUtils.getClaim claims: %s", claims));
         return claims;
     }
 

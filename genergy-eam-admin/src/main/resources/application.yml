@@ -1,20 +1,43 @@
+server:
+  port: 7001
+
 spring:
+  application:
+    name: genergy-eam-admin
   profiles:
     active: dev
-  output:
-    ansi:
-      enabled: always
-
-datasource:
-  type: com.alibaba.druid.pool.DruidDataSource
-  driver-class-name: com.mysql.cj.jdbc.Driver
-
-server:
-  port: 10000
 
 logging:
-  level.net.gichain.genergy.eam.admin.GenergyEamAdminApplication: info
-  path: logs
+  level:
+    net.gichain.genergy.eam.admin: debug
+  file:
+    path: ./logs/
   pattern:
     console: '%d{yyyy/MM/dd} [%thread] %-5level %logger{50} - %msg%n'
     file: '%d{yyyy/MM/dd} [%thread] %-5level %logger{50} - %msg%n'
+
+mybatis-plus:
+  configuration:
+    default-enum-type-handler: com.baomidou.mybatisplus.extension.handlers.MybatisEnumTypeHandler
+
+upload-path: "./uploads/"
+
+---
+spring:
+  profiles: dev
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: genergy_eam
+    url: jdbc:mysql://172.18.10.78:3306/genergy_eam?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2b8
+    username: root
+    password: 6x@test2018
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 50MB
+
+devtools:
+  restart:
+    enabled: true
+    additional-paths: src/main/java

@@ -1,14 +1,15 @@
 package net.gichain.genergy.eam.database.entity;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.io.Serializable;
+import java.util.Date;
+
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author cjp
@@ -33,7 +34,7 @@ public class WeatherForecast implements Serializable {
     /**
      * 天气日期
      */
-    private LocalDate date;
+    private Date date;
 
     /**
      * 温度
@@ -58,17 +59,18 @@ public class WeatherForecast implements Serializable {
     /**
      * 创建时间
      */
-    private LocalDateTime createTime;
+    private Date createTime;
 
     /**
      * 修改时间
      */
-    private LocalDateTime modifyTime;
+    private Date modifyTime;
 
     /**
      * 是否删除
      */
-    private Boolean isDelete;
+    @TableField(value = "is_delete")
+    private Boolean deleted;
 
 
 }

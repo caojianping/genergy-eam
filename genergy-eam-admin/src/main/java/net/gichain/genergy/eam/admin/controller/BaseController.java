@@ -1,26 +1,37 @@
 package net.gichain.genergy.eam.admin.controller;
 
-import net.gichain.genergy.eam.common.JsonResult;
-import net.gichain.genergy.eam.common.enums.CodeEnum;
-import net.gichain.genergy.eam.common.exceptions.BusinessException;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import net.gichain.genergy.eam.common.exception.TokenException;
+import net.gichain.genergy.eam.common.util.JwtUtils;
+import net.gichain.genergy.eam.common.util.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpServletRequest;
 
 public class BaseController {
-    @ExceptionHandler(Exception.class)
-    @ResponseStatus(HttpStatus.OK)
-    @ResponseBody
-    public Object handleException(HttpServletRequest request, Exception exception) {
-        if (exception instanceof BusinessException) {
-            BusinessException businessException = (BusinessException) exception;
-            return JsonResult.failure(businessException.getCode(), businessException.getMessage());
+    @Autowired
+    private HttpServletRequest httpRequest;
+
+    public String getToken() {
+        String authorization = this.httpRequest.getHeader("Authorization");
+        if (StringUtils.isNullOrEmpty(authorization)) {
+            return null;
         }
 
-        CodeEnum codeEnum = CodeEnum.UNKNOW_ERROR;
-        return JsonResult.failure(codeEnum.getCode(), codeEnum.getMessage());
+        String token = JwtUtils.resolveAuthorization(authorization);
+        if (StringUtils.isNullOrEmpty(token)) {
+            return null;
+        }
+
+        return token;
+    }
+
+    public Integer getUserId() throws TokenException {
+        String token = this.getToken();
+        return JwtUtils.getUserId(token);
+    }
+
+    public boolean isExpired() throws TokenException {
+        String token = this.getToken();
+        return JwtUtils.isExpired(token);
     }
 }

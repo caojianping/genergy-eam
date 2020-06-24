@@ -29,16 +29,15 @@ public final class Energy {
   static {
     java.lang.String[] descriptorData = {
       "\n\014Energy.proto\022 net.gichain.genergy.eam." +
-      "grpc.lib\032\031google/protobuf/any.proto\032\rReq" +
-      "uest.proto\032\014Result.proto\"3\n\022EnergyTrendR" +
-      "equest\022\017\n\007assetId\030\001 \001(\005\022\014\n\004type\030\002 \001(\0052\367\001" +
-      "\n\rEnergyService\022r\n\022getYesterdayEnergy\0220." +
-      "net.gichain.genergy.eam.grpc.lib.AssetId" +
-      "Request\032(.net.gichain.genergy.eam.grpc.l" +
-      "ib.Result\"\000\022r\n\016getEnergyTrend\0224.net.gich" +
-      "ain.genergy.eam.grpc.lib.EnergyTrendRequ" +
-      "est\032(.net.gichain.genergy.eam.grpc.lib.R" +
-      "esult\"\000B\002P\001b\006proto3"
+      "grpc.lib\032\rRequest.proto\032\014Result.proto\"3\n" +
+      "\022EnergyTrendRequest\022\017\n\007assetId\030\001 \001(\003\022\014\n\004" +
+      "type\030\002 \001(\0052\367\001\n\rEnergyService\022r\n\022getYeste" +
+      "rdayEnergy\0220.net.gichain.genergy.eam.grp" +
+      "c.lib.AssetIdRequest\032(.net.gichain.gener" +
+      "gy.eam.grpc.lib.Result\"\000\022r\n\016getEnergyTre" +
+      "nd\0224.net.gichain.genergy.eam.grpc.lib.En" +
+      "ergyTrendRequest\032(.net.gichain.genergy.e" +
+      "am.grpc.lib.Result\"\000B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -51,7 +50,6 @@ public final class Energy {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.AnyProto.getDescriptor(),
           net.gichain.genergy.eam.grpc.lib.Request.getDescriptor(),
           net.gichain.genergy.eam.grpc.lib.ResultOuterClass.getDescriptor(),
         }, assigner);
@@ -61,7 +59,6 @@ public final class Energy {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_net_gichain_genergy_eam_grpc_lib_EnergyTrendRequest_descriptor,
         new java.lang.String[] { "AssetId", "Type", });
-    com.google.protobuf.AnyProto.getDescriptor();
     net.gichain.genergy.eam.grpc.lib.Request.getDescriptor();
     net.gichain.genergy.eam.grpc.lib.ResultOuterClass.getDescriptor();
   }

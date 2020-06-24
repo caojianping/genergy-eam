@@ -1,15 +1,16 @@
 package net.gichain.genergy.eam.database.entity;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.io.Serializable;
+import java.util.Date;
+
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author cjp
@@ -34,7 +35,7 @@ public class Energy implements Serializable {
     /**
      * 发电日期
      */
-    private LocalDate date;
+    private Date date;
 
     /**
      * 实际日发电量，单位kWh
@@ -69,17 +70,18 @@ public class Energy implements Serializable {
     /**
      * 创建时间
      */
-    private LocalDateTime createTime;
+    private Date createTime;
 
     /**
      * 修改时间
      */
-    private LocalDateTime modifyTime;
+    private Date modifyTime;
 
     /**
      * 是否删除
      */
-    private Boolean isDelete;
+    @TableField(value = "is_delete")
+    private Boolean deleted;
 
 
 }

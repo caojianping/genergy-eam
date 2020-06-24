@@ -1,6 +1,11 @@
 package net.gichain.genergy.eam.admin.service;
 
-import net.gichain.genergy.eam.common.exceptions.BusinessException;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import net.gichain.genergy.eam.admin.controller.dto.UserDTO;
+import net.gichain.genergy.eam.admin.controller.vo.UserAddVO;
+import net.gichain.genergy.eam.admin.controller.vo.UserPasswordVO;
+import net.gichain.genergy.eam.admin.controller.vo.UserUpdateVO;
+import net.gichain.genergy.eam.common.exception.BusinessException;
 import net.gichain.genergy.eam.database.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,13 +18,23 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2020-06-13
  */
 public interface IUserService extends IService<User> {
-    boolean isExistByUserId(int id);
+    boolean isExistById(int id);
 
     boolean isExistByUsername(String username);
 
-    boolean register(String username, String password) throws BusinessException;
+    User login(UserAddVO userAddVO) throws BusinessException;
 
-    User login(String username, String password) throws BusinessException;
+    IPage<UserDTO> pageUsers(int current, int size, String username);
 
-    boolean updatePassword(int id, String newPwd, String confirmPwd) throws BusinessException;
+    User getUserByUsername(String username);
+
+    boolean addUser(UserAddVO userAddVO) throws BusinessException;
+
+    boolean updateUser(UserUpdateVO userUpdateVO);
+
+    boolean updatePassword(int id, UserPasswordVO userPasswordVO) throws BusinessException;
+
+    boolean resetPassword(int id);
+
+    boolean removeUser(int id);
 }

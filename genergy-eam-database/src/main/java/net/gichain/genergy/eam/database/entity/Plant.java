@@ -2,18 +2,23 @@ package net.gichain.genergy.eam.database.entity;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.io.Serializable;
+import java.util.Date;
+
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import net.gichain.genergy.eam.database.enums.PlantStatusEnum;
+import net.gichain.genergy.eam.database.enums.PlantTypeEnum;
+import org.apache.ibatis.type.JdbcType;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author cjp
- * @since 2020-06-17
+ * @since 2020-06-22
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -42,29 +47,41 @@ public class Plant implements Serializable {
     private String name;
 
     /**
-     * 电站类型
+     * 电站类型：0分布式光伏；1户用光伏；2户用储能；
      */
-    private Integer type;
+    @TableField(value = "type", jdbcType = JdbcType.INTEGER)
+    private PlantTypeEnum type;
 
     /**
-     * 电站状态
+     * 电站状态：0禁用；1启用；
      */
-    private Integer status;
+    @TableField(value = "status", jdbcType = JdbcType.INTEGER)
+    private PlantStatusEnum status;
 
     /**
      * 装机功率，单位kWp
      */
-    private Integer installedPower;
+    private BigDecimal installedPower;
 
     /**
      * 预计年发电量，单位kWh
      */
-    private Integer estimatedAnnualEnergy;
+    private BigDecimal estimatedAnnualEnergy;
+
+    /**
+     * 实际年发电量，单位kWh
+     */
+    private BigDecimal actualAnnualEnergy;
 
     /**
      * 预计年发电收益，单位元
      */
-    private Integer estimatedAnnualEnergyEarnings;
+    private BigDecimal estimatedAnnualEnergyEarnings;
+
+    /**
+     * 实际年发电收益，单位元
+     */
+    private BigDecimal actualAnnualEnergyEarnings;
 
     /**
      * 预计年发电最小收益率
@@ -92,11 +109,6 @@ public class Plant implements Serializable {
     private Integer residualEnergyTerm;
 
     /**
-     * 并网日期
-     */
-    private LocalDate gridConnectedDate;
-
-    /**
      * 建设公司
      */
     private String constructionCompany;
@@ -104,7 +116,32 @@ public class Plant implements Serializable {
     /**
      * 建成日期
      */
-    private LocalDate completedDate;
+    private Date completedDate;
+
+    /**
+     * 并网日期
+     */
+    private Date gridConnectedDate;
+
+    /**
+     * 省
+     */
+    private String province;
+
+    /**
+     * 市
+     */
+    private String city;
+
+    /**
+     * 县
+     */
+    private String district;
+
+    /**
+     * 地址
+     */
+    private String address;
 
     /**
      * 经度
@@ -117,11 +154,6 @@ public class Plant implements Serializable {
     private BigDecimal latitude;
 
     /**
-     * 地址
-     */
-    private String address;
-
-    /**
      * 组件总数
      */
     private Integer componentTotal;
@@ -130,11 +162,6 @@ public class Plant implements Serializable {
      * 组件厂家
      */
     private String componentSupplier;
-
-    /**
-     * 组件品牌
-     */
-    private String componentBrand;
 
     /**
      * 组件型号
@@ -147,11 +174,6 @@ public class Plant implements Serializable {
     private String inverterSupplier;
 
     /**
-     * 逆变器品牌
-     */
-    private String inverterBrand;
-
-    /**
      * 逆变器型号
      */
     private String inverterModel;
@@ -160,11 +182,6 @@ public class Plant implements Serializable {
      * 数据采集器厂家
      */
     private String collectorSupplier;
-
-    /**
-     * 数据采集器品牌
-     */
-    private String collectorBrand;
 
     /**
      * 数据采集器型号
@@ -184,17 +201,18 @@ public class Plant implements Serializable {
     /**
      * 创建时间
      */
-    private LocalDateTime createTime;
+    private Date createTime;
 
     /**
      * 修改时间
      */
-    private LocalDateTime modifyTime;
+    private Date modifyTime;
 
     /**
      * 是否删除
      */
-    private Boolean isDelete;
+    @TableField(value = "is_delete")
+    private Boolean deleted;
 
 
 }

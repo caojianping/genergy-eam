@@ -1,7 +1,6 @@
 package net.gichain.genergy.eam.grpc.server.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import net.gichain.genergy.eam.common.exceptions.BusinessException;
 import net.gichain.genergy.eam.database.entity.User;
 
 /**

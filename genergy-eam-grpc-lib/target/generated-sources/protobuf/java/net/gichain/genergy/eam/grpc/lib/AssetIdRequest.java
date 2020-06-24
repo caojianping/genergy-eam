@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AssetIdRequest() {
-    assetId_ = 0;
+    assetId_ = 0L;
   }
 
   @java.lang.Override
@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
           }
           case 8: {
 
-            assetId_ = input.readInt32();
+            assetId_ = input.readInt64();
             break;
           }
         }
@@ -80,15 +80,15 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASSETID_FIELD_NUMBER = 1;
-  private int assetId_;
+  private long assetId_;
   /**
    * <pre>
    * 资产编号
    * </pre>
    *
-   * <code>int32 assetId = 1;</code>
+   * <code>int64 assetId = 1;</code>
    */
-  public int getAssetId() {
+  public long getAssetId() {
     return assetId_;
   }
 
@@ -104,8 +104,8 @@ private static final long serialVersionUID = 0L;
 
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (assetId_ != 0) {
-      output.writeInt32(1, assetId_);
+    if (assetId_ != 0L) {
+      output.writeInt64(1, assetId_);
     }
     unknownFields.writeTo(output);
   }
@@ -115,9 +115,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (assetId_ != 0) {
+    if (assetId_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(1, assetId_);
+        .computeInt64Size(1, assetId_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -149,7 +149,8 @@ private static final long serialVersionUID = 0L;
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ASSETID_FIELD_NUMBER;
-    hash = (53 * hash) + getAssetId();
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getAssetId());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -279,7 +280,7 @@ private static final long serialVersionUID = 0L;
     }
     public Builder clear() {
       super.clear();
-      assetId_ = 0;
+      assetId_ = 0L;
 
       return this;
     }
@@ -345,7 +346,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(net.gichain.genergy.eam.grpc.lib.AssetIdRequest other) {
       if (other == net.gichain.genergy.eam.grpc.lib.AssetIdRequest.getDefaultInstance()) return this;
-      if (other.getAssetId() != 0) {
+      if (other.getAssetId() != 0L) {
         setAssetId(other.getAssetId());
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -375,15 +376,15 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int assetId_ ;
+    private long assetId_ ;
     /**
      * <pre>
      * 资产编号
      * </pre>
      *
-     * <code>int32 assetId = 1;</code>
+     * <code>int64 assetId = 1;</code>
      */
-    public int getAssetId() {
+    public long getAssetId() {
       return assetId_;
     }
     /**
@@ -391,9 +392,9 @@ private static final long serialVersionUID = 0L;
      * 资产编号
      * </pre>
      *
-     * <code>int32 assetId = 1;</code>
+     * <code>int64 assetId = 1;</code>
      */
-    public Builder setAssetId(int value) {
+    public Builder setAssetId(long value) {
       
       assetId_ = value;
       onChanged();
@@ -404,11 +405,11 @@ private static final long serialVersionUID = 0L;
      * 资产编号
      * </pre>
      *
-     * <code>int32 assetId = 1;</code>
+     * <code>int64 assetId = 1;</code>
      */
     public Builder clearAssetId() {
       
-      assetId_ = 0;
+      assetId_ = 0L;
       onChanged();
       return this;
     }

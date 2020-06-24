@@ -29,9 +29,8 @@ public final class Request {
   static {
     java.lang.String[] descriptorData = {
       "\n\rRequest.proto\022 net.gichain.genergy.eam" +
-      ".grpc.lib\032\031google/protobuf/any.proto\"!\n\016" +
-      "AssetIdRequest\022\017\n\007assetId\030\001 \001(\005B\002P\001b\006pro" +
-      "to3"
+      ".grpc.lib\"!\n\016AssetIdRequest\022\017\n\007assetId\030\001" +
+      " \001(\003B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -44,7 +43,6 @@ public final class Request {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.AnyProto.getDescriptor(),
         }, assigner);
     internal_static_net_gichain_genergy_eam_grpc_lib_AssetIdRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +50,6 @@ public final class Request {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_net_gichain_genergy_eam_grpc_lib_AssetIdRequest_descriptor,
         new java.lang.String[] { "AssetId", });
-    com.google.protobuf.AnyProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

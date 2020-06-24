@@ -1,0 +1,31 @@
+package net.gichain.genergy.eam.database.enums;
+
+import com.baomidou.mybatisplus.core.enums.IEnum;
+
+public enum PlantTypeEnum implements IEnum<Integer> {
+    /**
+     * 分布式光伏
+     */
+    DISTRIBUTED_PHOTOVOLTAIC(0),
+
+    /**
+     * 户用光伏
+     */
+    HOUSEHOLD_PHOTOVOLTAIC(1),
+
+    /**
+     * 户用储能
+     */
+    HOUSEHOLD_STORED_ENERGY(2);
+
+    private final int value;
+
+    PlantTypeEnum(int value) {
+        this.value = value;
+    }
+
+    @Override
+    public Integer getValue() {
+        return this.value;
+    }
+}

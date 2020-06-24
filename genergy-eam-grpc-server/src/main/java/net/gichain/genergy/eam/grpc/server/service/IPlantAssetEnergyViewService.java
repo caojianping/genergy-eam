@@ -1,7 +1,7 @@
 package net.gichain.genergy.eam.grpc.server.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import net.gichain.genergy.eam.database.entity.PlantAssetEnergyView;
+import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
@@ -9,7 +9,7 @@ import net.gichain.genergy.eam.database.entity.PlantAssetEnergyView;
  * </p>
  *
  * @author cjp
- * @since 2020-06-18
+ * @since 2020-06-19
  */
 public interface IPlantAssetEnergyViewService extends IService<PlantAssetEnergyView> {
 

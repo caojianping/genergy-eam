@@ -126,7 +126,7 @@ public final class PlantServiceGrpc {
      * <pre>
      * 获取电站上网电价
      * 使用：桂朝
-     * 响应：Object&lt;{ assetId: String, date: Date, electricityPrice: Decimal }&gt;
+     * 响应：Object&lt;{ assetId: String, date: String, electricityPrice: Decimal }&gt;
      * 示例：{ assetId: "123456789", date: "2020-01-01", electricityPrice: 0.52 }
      * </pre>
      */
@@ -193,7 +193,7 @@ public final class PlantServiceGrpc {
      * <pre>
      * 获取电站上网电价
      * 使用：桂朝
-     * 响应：Object&lt;{ assetId: String, date: Date, electricityPrice: Decimal }&gt;
+     * 响应：Object&lt;{ assetId: String, date: String, electricityPrice: Decimal }&gt;
      * 示例：{ assetId: "123456789", date: "2020-01-01", electricityPrice: 0.52 }
      * </pre>
      */
@@ -243,7 +243,7 @@ public final class PlantServiceGrpc {
      * <pre>
      * 获取电站上网电价
      * 使用：桂朝
-     * 响应：Object&lt;{ assetId: String, date: Date, electricityPrice: Decimal }&gt;
+     * 响应：Object&lt;{ assetId: String, date: String, electricityPrice: Decimal }&gt;
      * 示例：{ assetId: "123456789", date: "2020-01-01", electricityPrice: 0.52 }
      * </pre>
      */
@@ -291,7 +291,7 @@ public final class PlantServiceGrpc {
      * <pre>
      * 获取电站上网电价
      * 使用：桂朝
-     * 响应：Object&lt;{ assetId: String, date: Date, electricityPrice: Decimal }&gt;
+     * 响应：Object&lt;{ assetId: String, date: String, electricityPrice: Decimal }&gt;
      * 示例：{ assetId: "123456789", date: "2020-01-01", electricityPrice: 0.52 }
      * </pre>
      */

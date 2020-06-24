@@ -4,8 +4,8 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import net.gichain.genergy.eam.admin.service.IPlantService;
-import net.gichain.genergy.eam.common.annotations.TokenAnnotation;
-import net.gichain.genergy.eam.common.exceptions.BusinessException;
+import net.gichain.genergy.eam.common.annotation.TokenAnnotation;
+import net.gichain.genergy.eam.common.exception.BusinessException;
 import net.gichain.genergy.eam.database.entity.Plant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RequestMapping("/plant")
 @RestController
-public class PlantController {
+public class PlantController extends BaseController {
     @Autowired
     private IPlantService plantService;
 

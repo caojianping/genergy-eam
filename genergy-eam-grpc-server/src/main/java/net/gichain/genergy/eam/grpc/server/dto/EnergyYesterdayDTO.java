@@ -7,7 +7,7 @@ import lombok.ToString;
 import net.gichain.genergy.eam.database.entity.PlantAssetEnergyView;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.util.Date;
 
 @ToString
 @NoArgsConstructor
@@ -15,7 +15,7 @@ import java.time.LocalDate;
 @Data
 public class EnergyYesterdayDTO {
     private Long assetId;
-    private LocalDate date;
+    private Date date;
     private BigDecimal energy;
 
     public static EnergyYesterdayDTO convertFromView(PlantAssetEnergyView view) {

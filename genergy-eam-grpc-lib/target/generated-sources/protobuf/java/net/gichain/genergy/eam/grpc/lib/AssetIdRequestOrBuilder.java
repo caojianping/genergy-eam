@@ -12,7 +12,7 @@ public interface AssetIdRequestOrBuilder extends
    * 资产编号
    * </pre>
    *
-   * <code>int32 assetId = 1;</code>
+   * <code>int64 assetId = 1;</code>
    */
-  int getAssetId();
+  long getAssetId();
 }

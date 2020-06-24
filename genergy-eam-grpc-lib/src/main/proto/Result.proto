@@ -4,8 +4,6 @@ option java_multiple_files = true;
 
 package net.gichain.genergy.eam.grpc.lib;
 
-import "google/protobuf/any.proto";
-
 message Result {
     int32 code = 1; // 响应码：0成功；其他失败；
     bool success = 2; // 是否成功：true成功；false失败；

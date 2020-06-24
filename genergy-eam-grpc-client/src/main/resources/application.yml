@@ -1,13 +1,41 @@
 server:
-  port: 10002
+  port: 7003
+
 spring:
   application:
     name: genergy-eam-grpc-client
+  profiles:
+    active: dev
+
+logging:
+  level:
+    net.gichain.genergy.eam.grpc.client: debug
+  file:
+    path: ./logs/
+  pattern:
+    console: '%d{yyyy/MM/dd} [%thread] %-5level %logger{50} - %msg%n'
+    file: '%d{yyyy/MM/dd} [%thread] %-5level %logger{50} - %msg%n'
 
 grpc:
   client:
     genergy-eam-grpc-server:
-      address: 'static://127.0.0.1:10001'
+      address: 'static://127.0.0.1:7002'
       enableKeepAlive: true
       keepAliveWithoutCalls: true
       negotiationType: plaintext
+
+---
+spring:
+  profiles: dev
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: genergy_eam
+    url: jdbc:mysql://172.18.10.78:3306/genergy_eam?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2b8
+    username: root
+    password: 6x@test2018
+
+devtools:
+  restart:
+    enabled: true
+    additional-paths: src/main/java

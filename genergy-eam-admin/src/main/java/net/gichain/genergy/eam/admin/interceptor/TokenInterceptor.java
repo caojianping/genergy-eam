@@ -1,10 +1,9 @@
 package net.gichain.genergy.eam.admin.interceptor;
 
-import com.auth0.jwt.exceptions.JWTDecodeException;
 import lombok.extern.slf4j.Slf4j;
-import net.gichain.genergy.eam.common.annotations.TokenAnnotation;
+import net.gichain.genergy.eam.common.annotation.TokenAnnotation;
 import net.gichain.genergy.eam.common.enums.CodeEnum;
-import net.gichain.genergy.eam.common.exceptions.TokenException;
+import net.gichain.genergy.eam.common.exception.TokenException;
 import net.gichain.genergy.eam.common.util.JwtUtils;
 import net.gichain.genergy.eam.admin.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,7 +47,7 @@ public class TokenInterceptor implements HandlerInterceptor {
                 int userId = JwtUtils.getUserId(token);
                 log.info(String.format("TokenInterceptor userId: %d", userId));
 
-                boolean isExist = this.userService.isExistByUserId(userId);
+                boolean isExist = this.userService.isExistById(userId);
                 log.info(String.format("TokenInterceptor isExist: %s", isExist));
                 if (!isExist) {
                     throw new TokenException(CodeEnum.INVALID_USERINFO);

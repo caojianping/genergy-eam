@@ -126,7 +126,7 @@ public final class EnergyServiceGrpc {
      * <pre>
      * 获取电站昨日发电量
      * 使用：桂朝
-     * 响应：Object&lt;{ assetId: String, date: Date, energy: Decimal（目前取并网日发电量） }&gt;
+     * 响应：Object&lt;{ assetId: String, date: String, energy: Decimal（目前取并网日发电量） }&gt;
      * 示例：{ assetId: "123456789", date: "2020-01-01", energy: 15000 }
      * </pre>
      */
@@ -139,7 +139,7 @@ public final class EnergyServiceGrpc {
      * <pre>
      * 获取发电量走势
      * 使用：马习文
-     * 响应：List&lt;{ date: Date, energy: Decimal（目前取并网日发电量） }&gt;
+     * 响应：List&lt;{ date: String, energy: Decimal（目前取并网日发电量） }&gt;
      * 示例：[ { date: "2020-01-01", energy: 15000 }, { date: "2020-01-02", energy: 25000 } ]
      * </pre>
      */
@@ -193,7 +193,7 @@ public final class EnergyServiceGrpc {
      * <pre>
      * 获取电站昨日发电量
      * 使用：桂朝
-     * 响应：Object&lt;{ assetId: String, date: Date, energy: Decimal（目前取并网日发电量） }&gt;
+     * 响应：Object&lt;{ assetId: String, date: String, energy: Decimal（目前取并网日发电量） }&gt;
      * 示例：{ assetId: "123456789", date: "2020-01-01", energy: 15000 }
      * </pre>
      */
@@ -207,7 +207,7 @@ public final class EnergyServiceGrpc {
      * <pre>
      * 获取发电量走势
      * 使用：马习文
-     * 响应：List&lt;{ date: Date, energy: Decimal（目前取并网日发电量） }&gt;
+     * 响应：List&lt;{ date: String, energy: Decimal（目前取并网日发电量） }&gt;
      * 示例：[ { date: "2020-01-01", energy: 15000 }, { date: "2020-01-02", energy: 25000 } ]
      * </pre>
      */
@@ -243,7 +243,7 @@ public final class EnergyServiceGrpc {
      * <pre>
      * 获取电站昨日发电量
      * 使用：桂朝
-     * 响应：Object&lt;{ assetId: String, date: Date, energy: Decimal（目前取并网日发电量） }&gt;
+     * 响应：Object&lt;{ assetId: String, date: String, energy: Decimal（目前取并网日发电量） }&gt;
      * 示例：{ assetId: "123456789", date: "2020-01-01", energy: 15000 }
      * </pre>
      */
@@ -256,7 +256,7 @@ public final class EnergyServiceGrpc {
      * <pre>
      * 获取发电量走势
      * 使用：马习文
-     * 响应：List&lt;{ date: Date, energy: Decimal（目前取并网日发电量） }&gt;
+     * 响应：List&lt;{ date: String, energy: Decimal（目前取并网日发电量） }&gt;
      * 示例：[ { date: "2020-01-01", energy: 15000 }, { date: "2020-01-02", energy: 25000 } ]
      * </pre>
      */
@@ -291,7 +291,7 @@ public final class EnergyServiceGrpc {
      * <pre>
      * 获取电站昨日发电量
      * 使用：桂朝
-     * 响应：Object&lt;{ assetId: String, date: Date, energy: Decimal（目前取并网日发电量） }&gt;
+     * 响应：Object&lt;{ assetId: String, date: String, energy: Decimal（目前取并网日发电量） }&gt;
      * 示例：{ assetId: "123456789", date: "2020-01-01", energy: 15000 }
      * </pre>
      */
@@ -305,7 +305,7 @@ public final class EnergyServiceGrpc {
      * <pre>
      * 获取发电量走势
      * 使用：马习文
-     * 响应：List&lt;{ date: Date, energy: Decimal（目前取并网日发电量） }&gt;
+     * 响应：List&lt;{ date: String, energy: Decimal（目前取并网日发电量） }&gt;
      * 示例：[ { date: "2020-01-01", energy: 15000 }, { date: "2020-01-02", energy: 25000 } ]
      * </pre>
      */

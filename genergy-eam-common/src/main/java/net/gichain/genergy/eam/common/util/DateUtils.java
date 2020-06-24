@@ -12,6 +12,8 @@ import org.joda.time.format.DateTimeFormatter;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -32,6 +34,34 @@ public class DateUtils {
     public static final String YYYYMMDDHHMMSS = "yyyyMMddHHmmss";
     public static final String YYYYMMDDHHMMSSMS = "yyyyMMddHHmmssSSS";
     public static final String YYYYMM = "yyyyMM";
+
+
+    /**
+     * LocalDate转换成Date
+     *
+     * @param localDate LocalDate日期
+     * @return Date日期
+     */
+    public static Date localDateToDate(LocalDate localDate) {
+        if (null == localDate) {
+            return null;
+        }
+        ZonedDateTime zonedDateTime = localDate.atStartOfDay(ZoneId.systemDefault());
+        return Date.from(zonedDateTime.toInstant());
+    }
+
+    /**
+     * Date转换成LocalDate
+     *
+     * @param date Date日期
+     * @return LocalDate日期
+     */
+    public static LocalDate dateToLocalDate(Date date) {
+        if (null == date) {
+            return null;
+        }
+        return date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+    }
 
     /**
      * 将string字符串转化为制定格式的字符串
@@ -87,6 +117,21 @@ public class DateUtils {
         return dateTime.toString(formatStr);
     }
 
+    /**
+     * 将localDate类型的时间转化为string类型
+     *
+     * @param localDate
+     * @param formatStr
+     * @return
+     */
+    public static String dateToStr(LocalDate localDate, String formatStr) {
+        if (localDate == null) {
+            return "";
+        }
+        DateTime dateTime = new DateTime(localDateToDate(localDate));
+        return dateTime.toString(formatStr);
+    }
+
     /***
      * 将string字符串转化为Date类型的字符串
      *
@@ -97,6 +142,18 @@ public class DateUtils {
         DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern(STANDARD_FORMAT);
         DateTime dateTime = dateTimeFormatter.parseDateTime(dateTimeStr);
         return dateTime.toDate();
+    }
+
+    /***
+     * 将string字符串转化为Date类型的字符串
+     *
+     * @param dateTimeStr 需要转化的string类型的时间
+     * @return 返回转化后的LocalDate类型的时间
+     */
+    public static LocalDate strToLocalDate(String dateTimeStr) {
+        DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern(STANDARD_FORMAT);
+        DateTime dateTime = dateTimeFormatter.parseDateTime(dateTimeStr);
+        return dateToLocalDate(dateTime.toDate());
     }
 
     /**

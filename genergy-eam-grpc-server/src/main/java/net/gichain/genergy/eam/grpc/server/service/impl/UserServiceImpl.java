@@ -2,9 +2,9 @@ package net.gichain.genergy.eam.grpc.server.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
-import net.gichain.genergy.eam.grpc.server.service.IUserService;
 import net.gichain.genergy.eam.database.entity.User;
 import net.gichain.genergy.eam.database.mapper.UserMapper;
+import net.gichain.genergy.eam.grpc.server.service.IUserService;
 import org.springframework.stereotype.Service;
 
 /**

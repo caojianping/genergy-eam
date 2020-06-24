@@ -1,8 +1,9 @@
 package net.gichain.genergy.eam.database.entity;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.io.Serializable;
+import java.util.Date;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -12,13 +13,18 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author cjp
- * @since 2020-06-18
+ * @since 2020-06-19
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class PlantAssetSplitView implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * 电站编号
+     */
+    private String id;
 
     /**
      * 电站编号
@@ -58,14 +64,9 @@ public class PlantAssetSplitView implements Serializable {
     private String constructionCompany;
 
     /**
-     * 建成日期
-     */
-    private LocalDate completedDate;
-
-    /**
      * 并网日期
      */
-    private LocalDate gridConnectedDate;
+    private Date gridConnectedDate;
 
     /**
      * 省

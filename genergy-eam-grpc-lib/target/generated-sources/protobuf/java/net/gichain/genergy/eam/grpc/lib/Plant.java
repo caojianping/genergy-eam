@@ -24,15 +24,14 @@ public final class Plant {
   static {
     java.lang.String[] descriptorData = {
       "\n\013Plant.proto\022 net.gichain.genergy.eam.g" +
-      "rpc.lib\032\031google/protobuf/any.proto\032\rRequ" +
-      "est.proto\032\014Result.proto2\363\001\n\014PlantService" +
-      "\022s\n\023getElectricityPrice\0220.net.gichain.ge" +
-      "nergy.eam.grpc.lib.AssetIdRequest\032(.net." +
-      "gichain.genergy.eam.grpc.lib.Result\"\000\022n\n" +
-      "\016getPlantDetail\0220.net.gichain.genergy.ea" +
-      "m.grpc.lib.AssetIdRequest\032(.net.gichain." +
-      "genergy.eam.grpc.lib.Result\"\000B\002P\001b\006proto" +
-      "3"
+      "rpc.lib\032\rRequest.proto\032\014Result.proto2\363\001\n" +
+      "\014PlantService\022s\n\023getElectricityPrice\0220.n" +
+      "et.gichain.genergy.eam.grpc.lib.AssetIdR" +
+      "equest\032(.net.gichain.genergy.eam.grpc.li" +
+      "b.Result\"\000\022n\n\016getPlantDetail\0220.net.gicha" +
+      "in.genergy.eam.grpc.lib.AssetIdRequest\032(" +
+      ".net.gichain.genergy.eam.grpc.lib.Result" +
+      "\"\000B\002P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -45,11 +44,9 @@ public final class Plant {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.AnyProto.getDescriptor(),
           net.gichain.genergy.eam.grpc.lib.Request.getDescriptor(),
           net.gichain.genergy.eam.grpc.lib.ResultOuterClass.getDescriptor(),
         }, assigner);
-    com.google.protobuf.AnyProto.getDescriptor();
     net.gichain.genergy.eam.grpc.lib.Request.getDescriptor();
     net.gichain.genergy.eam.grpc.lib.ResultOuterClass.getDescriptor();
   }

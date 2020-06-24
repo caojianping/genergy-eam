@@ -1,69 +1,64 @@
 package net.gichain.genergy.eam.admin.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
-import net.gichain.genergy.eam.admin.controller.vo.UserVO;
-import net.gichain.genergy.eam.admin.controller.dto.UserPasswordDTO;
-import net.gichain.genergy.eam.common.annotations.TokenAnnotation;
-import net.gichain.genergy.eam.common.exceptions.BusinessException;
-import net.gichain.genergy.eam.database.entity.User;
+import net.gichain.genergy.eam.admin.controller.dto.UserDTO;
+import net.gichain.genergy.eam.admin.controller.vo.UserAddVO;
+import net.gichain.genergy.eam.admin.controller.vo.UserUpdateVO;
+import net.gichain.genergy.eam.common.annotation.TokenAnnotation;
+import net.gichain.genergy.eam.common.exception.BusinessException;
 import net.gichain.genergy.eam.admin.service.IUserService;
-import net.gichain.genergy.enums.AccountTypeEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RequestMapping("/user")
 @RestController
-public class UserController {
+public class UserController extends BaseController {
     @Autowired
     private IUserService userService;
 
     @TokenAnnotation
-    @GetMapping("/page/{pageNum}/{pageSize}")
+    @GetMapping("/page/{current}/{size}")
     @ResponseBody
-    public IPage<UserVO> page(
-            @PathVariable(name = "pageNum") int pageNum,
-            @PathVariable(name = "pageSize") int pageSize
+    public IPage<UserDTO> pageUsers(
+            @PathVariable(name = "current") int current,
+            @PathVariable(name = "size") int size,
+            @RequestParam(required = false) String username
     ) {
-        Page<User> page = new Page<User>(pageNum, pageSize);
-        return UserVO.converFromUserPage(userService.page(page));
+        log.info(String.format("/user/page current,size,username: %d %d %s", current, size, username));
+        return userService.pageUsers(current, size, username);
     }
 
     @TokenAnnotation
     @PostMapping("/add")
     @ResponseBody
-    public boolean add() throws BusinessException {
-        return true;
+    public boolean addUser(@RequestBody UserAddVO userAddVO) throws BusinessException {
+        log.info(String.format("/user/add userAddVO: %s", userAddVO.toString()));
+        return userService.addUser(userAddVO);
     }
 
     @TokenAnnotation
     @PostMapping("/update")
     @ResponseBody
-    public boolean update() throws BusinessException {
-        return true;
+    public boolean updateUser(@RequestBody UserUpdateVO userUpdateVO) {
+        log.info(String.format("/user/update userUpdateVO: %s", userUpdateVO.toString()));
+        return userService.updateUser(userUpdateVO);
     }
 
     @TokenAnnotation
-    @PostMapping("/remove")
+    @PostMapping("/resetPassword/{id}")
     @ResponseBody
-    public boolean remove(@RequestBody UserPasswordDTO userPasswordDTO) throws BusinessException {
-        return true;
+    public boolean resetPassword(@PathVariable(name = "id") int id) {
+        log.info(String.format("/user/resetPassword id: %d", id));
+        return userService.resetPassword(id);
     }
 
     @TokenAnnotation
-    @PostMapping("/updatePassword")
+    @PostMapping("/remove/{id}")
     @ResponseBody
-    public boolean updatePassword(@RequestBody UserPasswordDTO userPasswordDTO) throws BusinessException {
-        log.info(String.format("/user/updatePassword args: %s", userPasswordDTO.toString()));
-        return userService.updatePassword(userPasswordDTO.getId(), userPasswordDTO.getNewPwd(), userPasswordDTO.getConfirmPwd());
-    }
-
-    @TokenAnnotation
-    @PostMapping("/resetPassword")
-    @ResponseBody
-    public boolean resetPassword(int userId) throws BusinessException {
-        return true;
+    public boolean removeUser(@PathVariable(name = "id") int id) {
+        log.info(String.format("/user/remove id: %d", id));
+        return userService.removeUser(id);
     }
 }

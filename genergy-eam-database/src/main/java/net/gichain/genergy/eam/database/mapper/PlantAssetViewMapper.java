@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author cjp
- * @since 2020-06-18
+ * @since 2020-06-22
  */
 public interface PlantAssetViewMapper extends BaseMapper<PlantAssetView> {
 
