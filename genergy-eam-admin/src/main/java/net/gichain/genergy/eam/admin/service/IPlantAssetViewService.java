@@ -3,6 +3,7 @@ package net.gichain.genergy.eam.admin.service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import net.gichain.genergy.eam.admin.controller.dto.AssetDTO;
+import net.gichain.genergy.eam.admin.enums.UploadTypeEnum;
 import net.gichain.genergy.eam.database.entity.PlantAssetView;
 
 /**
@@ -27,4 +28,6 @@ public interface IPlantAssetViewService extends IService<PlantAssetView> {
     );
 
     PlantAssetView getDetail(long assetId);
+
+    String[] getStaticsByAssetId(long assetId, UploadTypeEnum uploadType);
 }

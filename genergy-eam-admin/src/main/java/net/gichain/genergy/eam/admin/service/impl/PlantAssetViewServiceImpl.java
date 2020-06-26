@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import net.gichain.genergy.eam.admin.controller.dto.AssetDTO;
+import net.gichain.genergy.eam.admin.enums.UploadTypeEnum;
 import net.gichain.genergy.eam.common.util.StringUtils;
 import net.gichain.genergy.eam.database.entity.PlantAssetView;
 import net.gichain.genergy.eam.database.mapper.PlantAssetViewMapper;
@@ -69,5 +70,23 @@ public class PlantAssetViewServiceImpl extends ServiceImpl<PlantAssetViewMapper,
     @Override
     public PlantAssetView getDetail(long assetId) {
         return this.getOne(new QueryWrapper<PlantAssetView>().eq("asset_id", assetId));
+    }
+
+    @Override
+    public String[] getStaticsByAssetId(long assetId, UploadTypeEnum uploadType) {
+        PlantAssetView record = this.getDetail(assetId);
+        if (record == null) {
+            return new String[]{};
+        }
+
+        if (uploadType == UploadTypeEnum.CERT_UPLOAD) {
+            return StringUtils.separate(record.getCertFiles(), ",");
+        } else if (uploadType == UploadTypeEnum.LEGAL_UPLOAD) {
+            return StringUtils.separate(record.getLegalFiles(), ",");
+        } else if (uploadType == UploadTypeEnum.IMG_UPLOAD) {
+            return StringUtils.separate(record.getImgs(), ",");
+        } else {
+            return new String[]{};
+        }
     }
 }
