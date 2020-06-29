@@ -4,10 +4,13 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import net.gichain.genergy.eam.admin.controller.dto.AssetDTO;
+import net.gichain.genergy.eam.admin.controller.dto.PlantDTO;
 import net.gichain.genergy.eam.admin.enums.UploadTypeEnum;
 import net.gichain.genergy.eam.common.util.StringUtils;
 import net.gichain.genergy.eam.database.entity.PlantAssetView;
+import net.gichain.genergy.eam.database.enums.AssetStatusEnum;
 import net.gichain.genergy.eam.database.mapper.PlantAssetViewMapper;
 import net.gichain.genergy.eam.admin.service.IPlantAssetViewService;
 import org.springframework.stereotype.Service;
@@ -20,6 +23,7 @@ import org.springframework.stereotype.Service;
  * @author cjp
  * @since 2020-06-19
  */
+@Slf4j
 @Service
 public class PlantAssetViewServiceImpl extends ServiceImpl<PlantAssetViewMapper, PlantAssetView> implements IPlantAssetViewService {
     @Override
@@ -47,24 +51,62 @@ public class PlantAssetViewServiceImpl extends ServiceImpl<PlantAssetViewMapper,
 
         Page<PlantAssetView> pageParameters = new Page<PlantAssetView>(current, size);
         QueryWrapper<PlantAssetView> queryParameters = new QueryWrapper<PlantAssetView>();
-        if (StringUtils.isNullOrEmpty(putawaySerial)) {
+        if (!StringUtils.isNullOrEmpty(putawaySerial)) {
             queryParameters = queryParameters.eq("putaway_serial", putawaySerial);
         }
-        if (StringUtils.isNullOrEmpty(plantName)) {
-            queryParameters = queryParameters.like("name", plantName);
+        if (!StringUtils.isNullOrEmpty(plantName)) {
+            queryParameters = queryParameters.like("plant_name", plantName);
         }
-        if (StringUtils.isNullOrEmpty(submitter)) {
+        if (!StringUtils.isNullOrEmpty(submitter)) {
             queryParameters = queryParameters.like("submitter_name", submitter);
         }
-        if (StringUtils.isNullOrEmpty(auditor)) {
+        if (!StringUtils.isNullOrEmpty(auditor)) {
             queryParameters = queryParameters.like("auditor_name", auditor);
         }
         if (status != null) {
             queryParameters = queryParameters.eq("asset_status", status);
         }
+        log.info("pageAssets queryParameters:" + queryParameters);
 
         IPage<PlantAssetView> pageResult = this.page(pageParameters, queryParameters);
         return AssetDTO.convertFromViewPage(pageResult);
+    }
+
+    @Override
+    public IPage<PlantDTO> pagePlants(
+            int current,
+            int size,
+            String putawaySerial,
+            String plantName,
+            String putawayStartTime,
+            String putawayEndTime
+    ) {
+        if (current <= 0) {
+            current = 1;
+        }
+        if (size > 1000) {
+            size = 1000;
+        }
+
+        Page<PlantAssetView> pageParameters = new Page<PlantAssetView>(current, size);
+        QueryWrapper<PlantAssetView> queryParameters = new QueryWrapper<PlantAssetView>();
+        queryParameters.eq("asset_status", AssetStatusEnum.AUDITED.getValue());
+        if (!StringUtils.isNullOrEmpty(putawaySerial)) {
+            queryParameters = queryParameters.eq("putaway_serial", putawaySerial);
+        }
+        if (!StringUtils.isNullOrEmpty(plantName)) {
+            queryParameters = queryParameters.like("plant_name", plantName);
+        }
+        if (!StringUtils.isNullOrEmpty(putawayStartTime) && StringUtils.isNullOrEmpty(putawayEndTime)) {
+            queryParameters = queryParameters.ge("putaway_time", putawayStartTime);
+        } else if (StringUtils.isNullOrEmpty(putawayStartTime) && !StringUtils.isNullOrEmpty(putawayEndTime)) {
+            queryParameters = queryParameters.le("putaway_time", putawayEndTime);
+        } else if (!StringUtils.isNullOrEmpty(putawayStartTime) && !StringUtils.isNullOrEmpty(putawayEndTime)) {
+            queryParameters = queryParameters.between("putaway_time", putawayStartTime, putawayEndTime);
+        }
+
+        IPage<PlantAssetView> pageResult = this.page(pageParameters, queryParameters);
+        return PlantDTO.convertFromViewPage(pageResult);
     }
 
     @Override

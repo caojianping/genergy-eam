@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 import lombok.Data;
@@ -89,22 +90,27 @@ public class Asset implements Serializable {
     /**
      * 电站建设价值
      */
-    private String plantConstructionValue;
+    private BigDecimal plantConstructionValue;
 
     /**
      * 电站预售价值
      */
-    private String plantPresellValue;
+    private BigDecimal plantPresellValue;
 
     /**
      * 电站折旧率
      */
-    private String plantDepreciationRate;
+    private BigDecimal plantDepreciationRate;
 
     /**
      * 电站特点
      */
     private String plantFeature;
+
+    /**
+     * 描述信息
+     */
+    private String description;
 
     /**
      * 证件文件
@@ -128,11 +134,6 @@ public class Asset implements Serializable {
     private AssetStatusEnum status;
 
     /**
-     * 描述信息
-     */
-    private String description;
-
-    /**
      * 提交人
      */
     private Integer submitBy;
@@ -146,6 +147,11 @@ public class Asset implements Serializable {
      * 审核人
      */
     private Integer auditBy;
+
+    /**
+     * 审核备注
+     */
+    private String auditRemark;
 
     /**
      * 上架时间
@@ -167,6 +173,4 @@ public class Asset implements Serializable {
      */
     @TableField(value = "is_delete")
     private Boolean deleted;
-
-
 }

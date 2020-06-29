@@ -31,16 +31,16 @@
     </modules>
 
     <distributionManagement>
-<!--        <repository>-->
-<!--            <id>releases</id>-->
-<!--            <name>Internal Releases</name>-->
-<!--            <url>https://dwww.dcpay.vip/nexus/content/repositories/releases/</url>-->
-<!--        </repository>-->
-<!--        <snapshotRepository>-->
-<!--            <id>snapshots</id>-->
-<!--            <name>Internal Snapshots</name>-->
-<!--            <url>https://dwww.dcpay.vip/nexus/content/repositories/snapshots/</url>-->
-<!--        </snapshotRepository>-->
+        <!--        <repository>-->
+        <!--            <id>releases</id>-->
+        <!--            <name>Internal Releases</name>-->
+        <!--            <url>https://dwww.dcpay.vip/nexus/content/repositories/releases/</url>-->
+        <!--        </repository>-->
+        <!--        <snapshotRepository>-->
+        <!--            <id>snapshots</id>-->
+        <!--            <name>Internal Snapshots</name>-->
+        <!--            <url>https://dwww.dcpay.vip/nexus/content/repositories/snapshots/</url>-->
+        <!--        </snapshotRepository>-->
         <repository>
             <id>localRepository</id>
             <url>file:E:/maven/repository</url>

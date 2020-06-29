@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.server.service.GrpcService;
 import net.gichain.genergy.eam.common.enums.CodeEnum;
 import net.gichain.genergy.eam.common.util.DateUtils;
+import net.gichain.genergy.eam.common.util.MathUtils;
 import net.gichain.genergy.eam.database.entity.PlantAssetEnergyView;
 import net.gichain.genergy.eam.grpc.lib.AssetIdRequest;
 import net.gichain.genergy.eam.grpc.lib.EnergyServiceGrpc;
@@ -17,10 +18,9 @@ import net.gichain.genergy.eam.grpc.server.service.IPlantAssetEnergyViewService;
 import net.gichain.genergy.vo.statistics.Movements;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -71,13 +71,46 @@ public class EnergyServerService extends EnergyServiceGrpc.EnergyServiceImplBase
         Long assetId = request.getAssetId();
         log.info(String.format("获取发电量走势 assetId,type: %d %d", assetId, type));
 
-        QueryWrapper<PlantAssetEnergyView> wrapper = new QueryWrapper<PlantAssetEnergyView>();
-        wrapper.eq("asset_id", assetId);
+        List<PlantAssetEnergyView> plantAssetEnergyViews = new ArrayList<>();
         if (type == 1) {
+            QueryWrapper<PlantAssetEnergyView> wrapper = new QueryWrapper<PlantAssetEnergyView>();
+            wrapper.eq("asset_id", assetId);
             Date date = DateUtils.plusDays(new Date(), -10);
             wrapper.ge("date", DateUtils.dateToStr(date, "yyyy-MM-dd"));
+            plantAssetEnergyViews = plantAssetEnergyViewService.list(wrapper);
+        } else if (type == 2) {
+            Date date = DateUtils.now("yyyy-MM-01");
+            for (int i = 0; i < 12; i++) {
+                PlantAssetEnergyView item = new PlantAssetEnergyView();
+                item.setAssetId(assetId);
+
+                Date mockDate = DateUtils.minusMonth(date, i);
+                item.setDate(mockDate);
+
+                int month = DateUtils.getMonthOfYear(mockDate);
+                if (month == 5 || month == 6 || month == 10) {
+                    BigDecimal energy = new BigDecimal(randomDigit(50000, 60000));
+                    item.setGridDailyEnergy(MathUtils.bigDecimalRound(energy, 2));
+                } else if (month == 7 || month == 8 || month == 9) {
+                    BigDecimal energy = new BigDecimal(randomDigit(60000, 70000));
+                    item.setGridDailyEnergy(MathUtils.bigDecimalRound(energy, 2));
+                } else {
+                    BigDecimal energy = new BigDecimal(randomDigit(20000, 40000));
+                    item.setGridDailyEnergy(MathUtils.bigDecimalRound(energy, 2));
+                }
+                plantAssetEnergyViews.add(item);
+            }
+        } else if (type == 3) {
+            for (int i = 0; i < 3; i++) {
+                PlantAssetEnergyView item = new PlantAssetEnergyView();
+                item.setAssetId(assetId);
+                Date date = DateUtils.strToDate((2020 - i) + "-01-01", "yyyy-MM-dd");
+                item.setDate(date);
+                BigDecimal energy = new BigDecimal(randomDigit(480000, 600000));
+                item.setGridDailyEnergy(MathUtils.bigDecimalRound(energy, 2));
+                plantAssetEnergyViews.add(item);
+            }
         }
-        List<PlantAssetEnergyView> plantAssetEnergyViews = type == 1 ? plantAssetEnergyViewService.list(wrapper) : Collections.EMPTY_LIST;
         log.info(String.format("获取发电量走势 views: %s", plantAssetEnergyViews));
 
         List<Movements> result = convertToMovements(type, plantAssetEnergyViews);
@@ -93,5 +126,9 @@ public class EnergyServerService extends EnergyServiceGrpc.EnergyServiceImplBase
             movements.setEnergy(energy);
             return movements;
         }).collect(Collectors.toList());
+    }
+
+    public static float randomDigit(float min, float max) {
+        return min + ((max - min) * new Random().nextFloat());
     }
 }

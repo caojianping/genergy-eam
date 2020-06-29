@@ -1,6 +1,6 @@
 package net.gichain.genergy.eam.admin.enums;
 
-import lombok.Getter;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
  * 法律文件枚举
@@ -36,10 +36,14 @@ public enum LegalFileTypeEnum {
      */
     PUTAWAY_PROJECT_CONTRACT(6);
 
-    @Getter
     private final int value;
 
     LegalFileTypeEnum(int value) {
         this.value = value;
+    }
+
+    @JsonValue
+    public Integer getValue() {
+        return this.value;
     }
 }

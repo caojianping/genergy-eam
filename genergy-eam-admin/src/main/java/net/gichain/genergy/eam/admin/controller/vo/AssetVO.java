@@ -4,10 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import net.gichain.genergy.eam.database.enums.CompanyTypeEnum;
-import net.gichain.genergy.eam.database.enums.CorpCertTypeEnum;
-import net.gichain.genergy.eam.database.enums.PlantStatusEnum;
-import net.gichain.genergy.eam.database.enums.PlantTypeEnum;
 
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
@@ -18,42 +14,10 @@ import java.util.Date;
 @NoArgsConstructor
 @Data
 public class AssetVO {
-
-    @ToString
-    @AllArgsConstructor
-    @NoArgsConstructor
-    @Data
-    public class PlantAddressVO {
-        /**
-         * 省
-         */
-        private String province;
-
-        /**
-         * 市
-         */
-        private String city;
-
-        /**
-         * 县
-         */
-        private String district;
-
-        /**
-         * 地址
-         */
-        private String address;
-    }
-
-    /**
-     * 资产编号
-     */
-    private Long assetId;
-
     /**
      * 电站编号
      */
-    private String plantId;
+    private String id;
 
     /**
      * 电站PS编号
@@ -71,22 +35,25 @@ public class AssetVO {
      * 电站名称
      */
     @NotNull(message = "电站名称不可以为空")
-    private String name;
+    private String plantName;
 
 
     /**
      * 电站类型：0分布式光伏；1户用光伏；2户用储能；
      */
-    private PlantTypeEnum type;
+    @NotNull(message = "电站类型不可以为空")
+    private Integer plantType;
 
     /**
      * 电站状态：0禁用；1启用；
      */
-    private PlantStatusEnum status;
+    @NotNull(message = "电站状态不可以为空")
+    private Integer plantStatus;
 
     /**
      * 装机功率，单位kWp
      */
+    @NotNull(message = "装机功率不可以为空")
     private BigDecimal installedPower;
 
     /**
@@ -120,7 +87,7 @@ public class AssetVO {
     private BigDecimal estimatedAnnualEnergyMaxEarningsRate;
 
     /**
-     * 上网电价（精确到分），单位元
+     * 上网电价，单位元
      */
     private BigDecimal electricityPrice;
 
@@ -148,6 +115,26 @@ public class AssetVO {
      * 并网日期
      */
     private Date gridConnectedDate;
+
+    /**
+     * 省
+     */
+    private String province;
+
+    /**
+     * 市
+     */
+    private String city;
+
+    /**
+     * 县
+     */
+    private String district;
+
+    /**
+     * 地址
+     */
+    private String address;
 
     /**
      * 组件总数
@@ -185,15 +172,14 @@ public class AssetVO {
     private String collectorModel;
 
     /**
-     * 电站地址
+     * 资产编号
      */
-    private PlantAddressVO plantAddressVO;
+    private Long assetId;
 
     /**
-     * 电站图片
+     * 资产名称
      */
-    private String[] imgs;
-
+    private String assetName;
 
     /**
      * 企业名称，业主名称
@@ -203,7 +189,7 @@ public class AssetVO {
     /**
      * 企业类型
      */
-    private CompanyTypeEnum companyType;
+    private Integer companyType;
 
     /**
      * 企业地址
@@ -218,7 +204,7 @@ public class AssetVO {
     /**
      * 法人证件类型
      */
-    private CorpCertTypeEnum corpCertType;
+    private Integer corpCertType;
 
     /**
      * 法人证件号码
@@ -226,29 +212,19 @@ public class AssetVO {
     private String corpCertNo;
 
     /**
-     * 证件文件
-     */
-    private String[] certFiles;
-
-    /**
-     * 法律文件
-     */
-    private String[] legalFiles;
-
-    /**
      * 电站建设价值
      */
-    private String plantConstructionValue;
+    private BigDecimal plantConstructionValue;
 
     /**
      * 电站预售价值
      */
-    private String plantPresellValue;
+    private BigDecimal plantPresellValue;
 
     /**
      * 电站折旧率
      */
-    private String plantDepreciationRate;
+    private BigDecimal plantDepreciationRate;
 
     /**
      * 电站特点
@@ -259,4 +235,19 @@ public class AssetVO {
      * 描述信息
      */
     private String description;
+
+    /**
+     * 证件文件
+     */
+    private String certFiles;
+
+    /**
+     * 法律文件
+     */
+    private String legalFiles;
+
+    /**
+     * 电站图片
+     */
+    private String imgs;
 }

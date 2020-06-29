@@ -7,9 +7,7 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import net.gichain.genergy.eam.database.enums.AssetStatusEnum;
-import net.gichain.genergy.eam.database.enums.PlantStatusEnum;
-import net.gichain.genergy.eam.database.enums.PlantTypeEnum;
+import net.gichain.genergy.eam.database.enums.*;
 import org.apache.ibatis.type.JdbcType;
 
 /**
@@ -32,16 +30,6 @@ public class PlantAssetView implements Serializable {
     private String id;
 
     /**
-     * 资产编号
-     */
-    private Long assetId;
-
-    /**
-     * 上网电价（精确到分），单位元
-     */
-    private BigDecimal electricityPrice;
-
-    /**
      * 电站PS编号
      */
     private String psId;
@@ -54,19 +42,19 @@ public class PlantAssetView implements Serializable {
     /**
      * 电站名称
      */
-    private String name;
+    private String plantName;
 
     /**
      * 电站类型：0分布式光伏；1户用光伏；2户用储能；
      */
-    @TableField(value = "type", jdbcType = JdbcType.INTEGER)
-    private PlantTypeEnum type;
+    @TableField(value = "plant_type", jdbcType = JdbcType.INTEGER)
+    private PlantTypeEnum plantType;
 
     /**
      * 电站状态：0禁用；1启用；
      */
-    @TableField(value = "status", jdbcType = JdbcType.INTEGER)
-    private PlantStatusEnum status;
+    @TableField(value = "plant_status", jdbcType = JdbcType.INTEGER)
+    private PlantStatusEnum plantStatus;
 
     /**
      * 装机功率，单位kWp
@@ -102,6 +90,16 @@ public class PlantAssetView implements Serializable {
      * 预计年发电最大收益率
      */
     private BigDecimal estimatedAnnualEnergyMaxEarningsRate;
+
+    /**
+     * 累计发电量，单位kWh
+     */
+    private BigDecimal totalEnergy;
+
+    /**
+     * 上网电价，单位元
+     */
+    private BigDecimal electricityPrice;
 
     /**
      * 发电年限，单位天
@@ -194,9 +192,9 @@ public class PlantAssetView implements Serializable {
     private String collectorModel;
 
     /**
-     * 图片信息
+     * 资产编号
      */
-    private String imgs;
+    private Long assetId;
 
     /**
      * 资产币种
@@ -216,7 +214,8 @@ public class PlantAssetView implements Serializable {
     /**
      * 企业类型
      */
-    private Integer companyType;
+    @TableField(value = "company_type", jdbcType = JdbcType.INTEGER)
+    private CompanyTypeEnum companyType;
 
     /**
      * 企业地址
@@ -231,7 +230,8 @@ public class PlantAssetView implements Serializable {
     /**
      * 法人证件类型
      */
-    private String corpCertType;
+    @TableField(value = "corp_cert_type", jdbcType = JdbcType.INTEGER)
+    private CorpCertTypeEnum corpCertType;
 
     /**
      * 法人证件号码
@@ -241,22 +241,27 @@ public class PlantAssetView implements Serializable {
     /**
      * 电站建设价值
      */
-    private String plantConstructionValue;
+    private BigDecimal plantConstructionValue;
 
     /**
      * 电站预售价值
      */
-    private String plantPresellValue;
+    private BigDecimal plantPresellValue;
 
     /**
      * 电站折旧率
      */
-    private String plantDepreciationRate;
+    private BigDecimal plantDepreciationRate;
 
     /**
      * 电站特点
      */
     private String plantFeature;
+
+    /**
+     * 描述信息
+     */
+    private String description;
 
     /**
      * 证件文件
@@ -269,20 +274,25 @@ public class PlantAssetView implements Serializable {
     private String legalFiles;
 
     /**
+     * 图片信息
+     */
+    private String imgs;
+
+    /**
      * 资产状态：0已创建/已保存/待提交；10已提交/待审核；20已审核；
      */
     @TableField(value = "asset_status", jdbcType = JdbcType.INTEGER)
     private AssetStatusEnum assetStatus;
 
     /**
-     * 描述信息
-     */
-    private String description;
-
-    /**
      * 提交人
      */
     private Integer submitterId;
+
+    /**
+     * 提交人名称
+     */
+    private String submitterName;
 
     /**
      * 提交时间
@@ -295,13 +305,23 @@ public class PlantAssetView implements Serializable {
     private Integer auditorId;
 
     /**
+     * 审核人名称
+     */
+    private String auditorName;
+
+    /**
+     * 审核备注
+     */
+    private String auditRemark;
+
+    /**
      * 上架时间
      */
     private Date putawayTime;
 
-    private String submitterName;
-
-    private String auditorName;
-
-
+    /**
+     * 是否删除
+     */
+    @TableField(value = "is_delete")
+    private Boolean deleted;
 }

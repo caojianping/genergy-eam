@@ -1,6 +1,7 @@
 package net.gichain.genergy.eam.database.enums;
 
 import com.baomidou.mybatisplus.core.enums.IEnum;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum PlantTypeEnum implements IEnum<Integer> {
     /**
@@ -24,8 +25,23 @@ public enum PlantTypeEnum implements IEnum<Integer> {
         this.value = value;
     }
 
+    @JsonValue
     @Override
     public Integer getValue() {
         return this.value;
+    }
+
+    public static PlantTypeEnum getEnumByValue(Integer value) {
+        if (value == null) {
+            return null;
+        }
+
+        PlantTypeEnum[] enums = PlantTypeEnum.values();
+        for (PlantTypeEnum e : enums) {
+            if (value.equals(e.getValue())) {
+                return e;
+            }
+        }
+        return null;
     }
 }

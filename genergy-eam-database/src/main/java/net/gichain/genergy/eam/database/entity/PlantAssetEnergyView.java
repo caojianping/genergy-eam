@@ -50,6 +50,4 @@ public class PlantAssetEnergyView implements Serializable {
      * 并网日发电量，单位kWh
      */
     private BigDecimal gridDailyEnergy;
-
-
 }

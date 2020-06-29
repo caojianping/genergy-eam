@@ -1,6 +1,7 @@
 package net.gichain.genergy.eam.database.enums;
 
 import com.baomidou.mybatisplus.core.enums.IEnum;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum AssetStatusEnum implements IEnum<Integer> {
     /**
@@ -24,8 +25,23 @@ public enum AssetStatusEnum implements IEnum<Integer> {
         this.value = value;
     }
 
+    @JsonValue
     @Override
     public Integer getValue() {
         return this.value;
+    }
+
+    public static AssetStatusEnum getEnumByValue(Integer value) {
+        if (value == null) {
+            return null;
+        }
+
+        AssetStatusEnum[] enums = AssetStatusEnum.values();
+        for (AssetStatusEnum e : enums) {
+            if (value.equals(e.getValue())) {
+                return e;
+            }
+        }
+        return null;
     }
 }

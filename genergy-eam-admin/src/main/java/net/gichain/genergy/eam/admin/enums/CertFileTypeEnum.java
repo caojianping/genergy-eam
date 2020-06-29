@@ -1,6 +1,6 @@
 package net.gichain.genergy.eam.admin.enums;
 
-import lombok.Getter;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
  * 证件文件枚举
@@ -31,10 +31,14 @@ public enum CertFileTypeEnum {
      */
     IDCARD_BACK(5);
 
-    @Getter
     private final int value;
 
     CertFileTypeEnum(int value) {
         this.value = value;
+    }
+
+    @JsonValue
+    public Integer getValue() {
+        return this.value;
     }
 }

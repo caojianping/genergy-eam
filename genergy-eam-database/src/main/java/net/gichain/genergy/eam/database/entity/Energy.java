@@ -43,19 +43,9 @@ public class Energy implements Serializable {
     private BigDecimal actualDailyEnergy;
 
     /**
-     * 实际总发电量，单位kWh
-     */
-    private BigDecimal actualTotalEnergy;
-
-    /**
      * 并网日发电量，单位kWh
      */
     private BigDecimal gridDailyEnergy;
-
-    /**
-     * 并网总发电量，单位kWh
-     */
-    private BigDecimal gridTotalEnergy;
 
     /**
      * 功率，单位kW
@@ -82,6 +72,4 @@ public class Energy implements Serializable {
      */
     @TableField(value = "is_delete")
     private Boolean deleted;
-
-
 }

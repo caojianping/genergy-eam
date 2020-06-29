@@ -1,5 +1,6 @@
 package net.gichain.genergy.eam.admin.service;
 
+import net.gichain.genergy.eam.admin.controller.vo.AssetAuditVO;
 import net.gichain.genergy.eam.admin.controller.vo.AssetVO;
 import net.gichain.genergy.eam.common.exception.BusinessException;
 import net.gichain.genergy.eam.database.entity.Asset;
@@ -19,5 +20,5 @@ public interface IAssetService extends IService<Asset> {
 
     boolean saveCombinedData(int userId, AssetVO assetVO, boolean isSubmit) throws BusinessException;
 
-    boolean setStatus(int userId, long assetId, AssetStatusEnum status) throws BusinessException;
+    boolean setStatus(int userId, AssetAuditVO assetAuditVO) throws BusinessException;
 }

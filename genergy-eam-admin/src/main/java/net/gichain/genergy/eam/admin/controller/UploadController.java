@@ -1,7 +1,6 @@
 package net.gichain.genergy.eam.admin.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import net.gichain.genergy.eam.admin.enums.CertFileTypeEnum;
 import net.gichain.genergy.eam.admin.enums.LegalFileTypeEnum;
 import net.gichain.genergy.eam.admin.enums.UploadTypeEnum;
 import net.gichain.genergy.eam.admin.service.IPlantAssetViewService;
@@ -44,19 +43,20 @@ public class UploadController extends BaseController {
             @RequestParam("file") MultipartFile file
     ) throws BusinessException {
         log.info(String.format("/upload/cert fileType,assetId,file: %s %d %s", fileType, assetId, file));
+
         if (file.isEmpty()) {
             throw new BusinessException(CodeEnum.FILE_REQUIRED);
         }
 
-        String prefix = UploadTypeEnum.CERT_UPLOAD + "_" + fileType + "_";
+        String prefix = UploadTypeEnum.CERT_UPLOAD.getValue() + "_" + fileType + "_";
         if (assetId == null) {
             // 新增证件文件
-            return this.addFile(file, this.tempPath, prefix);
+            return this.addFile(file, this.filePath, prefix);
         } else {
             // 修改证件文件
             String[] certFiles = plantAssetViewService.getStaticsByAssetId(assetId, UploadTypeEnum.CERT_UPLOAD);
-            String certFile = this.filePath + ArrayUtils.findItem(certFiles, prefix);
-            return this.saveFile(file, certFile);
+            String certFile = ArrayUtils.findItem(certFiles, prefix);
+            return this.saveFile(file, this.filePath, certFile);
         }
     }
 
@@ -64,24 +64,25 @@ public class UploadController extends BaseController {
     @PostMapping("/legal/{fileType}")
     @ResponseBody
     public String uploadLegal(
-            @PathVariable(name = "fileType") LegalFileTypeEnum fileType,
+            @PathVariable(name = "fileType") int fileType,
             @RequestParam(required = false) Long assetId,
             @RequestParam("file") MultipartFile file
     ) throws BusinessException {
         log.info(String.format("/upload/legal fileType,assetId,file: %s %d %s", fileType, assetId, file));
+
         if (file.isEmpty()) {
             throw new BusinessException(CodeEnum.FILE_REQUIRED);
         }
 
-        String prefix = UploadTypeEnum.LEGAL_UPLOAD + "_" + fileType + "_";
+        String prefix = UploadTypeEnum.LEGAL_UPLOAD.getValue() + "_" + fileType + "_";
         if (assetId == null) {
             // 新增证件文件
-            return this.addFile(file, this.tempPath, prefix);
+            return this.addFile(file, this.filePath, prefix);
         } else {
             // 修改证件文件
             String[] legalFiles = plantAssetViewService.getStaticsByAssetId(assetId, UploadTypeEnum.LEGAL_UPLOAD);
-            String legalFile = this.filePath + ArrayUtils.findItem(legalFiles, prefix);
-            return this.saveFile(file, legalFile);
+            String legalFile = ArrayUtils.findItem(legalFiles, prefix);
+            return this.saveFile(file, this.filePath, legalFile);
         }
     }
 
@@ -93,15 +94,16 @@ public class UploadController extends BaseController {
             @RequestParam("files") MultipartFile[] files
     ) throws BusinessException {
         log.info(String.format("/upload/imgs assetId,files: %d %s", assetId, files));
+
         if (files.length <= 0) {
             throw new BusinessException(CodeEnum.FILE_REQUIRED);
         }
 
-        String prefix = UploadTypeEnum.IMG_UPLOAD + "_";
+        String prefix = UploadTypeEnum.IMG_UPLOAD.getValue() + "_";
         // 新增图片文件
         List<String> imgs = new ArrayList<>();
         for (MultipartFile file : files) {
-            String fileName = this.addFile(file, this.tempPath, prefix);
+            String fileName = this.addFile(file, this.filePath, prefix);
             imgs.add(fileName);
         }
         return imgs;
@@ -111,13 +113,13 @@ public class UploadController extends BaseController {
         String guid = UUIDUtils.randomUUID();
         String originName = file.getOriginalFilename();
         String ext = originName.substring(originName.lastIndexOf("."));
-        String fileName = path + prefix + "_" + guid + "." + ext;
-        return this.saveFile(file, fileName);
+        String fileName = prefix + guid + ext;
+        return this.saveFile(file, path, fileName);
     }
 
-    private String saveFile(MultipartFile file, String fileName) throws BusinessException {
+    private String saveFile(MultipartFile file, String path, String fileName) throws BusinessException {
         try {
-            file.transferTo(new File(fileName));
+            file.transferTo(new File(path + fileName));
         } catch (IOException exception) {
             log.info(String.format("saveFile exception: %s", exception));
             throw new BusinessException(CodeEnum.FILE_ERROR);

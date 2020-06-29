@@ -17,6 +17,10 @@ logging:
     console: '%d{yyyy/MM/dd} [%thread] %-5level %logger{50} - %msg%n'
     file: '%d{yyyy/MM/dd} [%thread] %-5level %logger{50} - %msg%n'
 
+mybatis-plus:
+  configuration:
+    default-enum-type-handler: com.baomidou.mybatisplus.extension.handlers.MybatisEnumTypeHandler
+
 ---
 spring:
   profiles: dev

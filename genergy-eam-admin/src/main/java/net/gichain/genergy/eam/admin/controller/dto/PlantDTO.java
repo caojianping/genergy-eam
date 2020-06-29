@@ -6,20 +6,20 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import net.gichain.genergy.eam.database.entity.PlantAssetView;
-import net.gichain.genergy.eam.database.enums.AssetStatusEnum;
 import org.springframework.beans.BeanUtils;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class AssetDTO {
+public class PlantDTO {
     /**
-     * 资产编号
+     * 电站编号
      */
-    private Long assetId;
+    private String id;
 
     /**
      * 上架序号
@@ -27,48 +27,38 @@ public class AssetDTO {
     private String putawaySerial;
 
     /**
+     * 上架时间
+     */
+    private Date putawayTime;
+
+    /**
      * 电站名称
      */
     private String plantName;
 
     /**
-     * 提交人编号
+     * 装机功率，单位kWp
      */
-    private Integer submitterId;
+    private BigDecimal installedPower;
 
     /**
-     * 提交人名称
+     * 上网电价（精确到分），单位元
      */
-    private String submitterName;
+    private BigDecimal electricityPrice;
 
     /**
-     * 提交时间
+     * 累计发电量
      */
-    private Date submitTime;
+    private BigDecimal totalEnergy;
 
     /**
-     * 审核人编号
+     * 累计已结算电费（元）
      */
-    private Integer auditorId;
+    private BigDecimal totalEnergyCost;
 
-    /**
-     * 审核人名称
-     */
-    private String auditorName;
-
-    /**
-     * 审核时间
-     */
-    private Date auditTime;
-
-    /**
-     * 资产状态
-     */
-    private AssetStatusEnum assetStatus;
-
-    public static IPage<AssetDTO> convertFromViewPage(IPage<PlantAssetView> viewPage) {
+    public static IPage<PlantDTO> convertFromViewPage(IPage<PlantAssetView> viewPage) {
         return viewPage.convert(view -> {
-            AssetDTO dto = new AssetDTO();
+            PlantDTO dto = new PlantDTO();
             BeanUtils.copyProperties(view, dto);
             return dto;
         });

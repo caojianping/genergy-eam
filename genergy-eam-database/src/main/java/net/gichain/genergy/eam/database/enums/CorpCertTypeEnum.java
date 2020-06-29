@@ -1,6 +1,7 @@
 package net.gichain.genergy.eam.database.enums;
 
 import com.baomidou.mybatisplus.core.enums.IEnum;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum CorpCertTypeEnum implements IEnum<Integer> {
     /**
@@ -24,8 +25,23 @@ public enum CorpCertTypeEnum implements IEnum<Integer> {
         this.value = value;
     }
 
+    @JsonValue
     @Override
     public Integer getValue() {
         return this.value;
+    }
+
+    public static CorpCertTypeEnum getEnumByValue(Integer value) {
+        if (value == null) {
+            return null;
+        }
+
+        CorpCertTypeEnum[] enums = CorpCertTypeEnum.values();
+        for (CorpCertTypeEnum e : enums) {
+            if (value.equals(e.getValue())) {
+                return e;
+            }
+        }
+        return null;
     }
 }

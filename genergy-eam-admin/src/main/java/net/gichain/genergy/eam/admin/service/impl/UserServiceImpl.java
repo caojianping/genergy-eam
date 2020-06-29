@@ -107,7 +107,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
         Page<User> pageParameters = new Page<User>(current, size);
         QueryWrapper<User> queryParameters = new QueryWrapper<User>();
-        if (StringUtils.isNullOrEmpty(username)) {
+        if (!StringUtils.isNullOrEmpty(username)) {
             queryParameters = queryParameters.like("username", username);
         }
 

@@ -5,7 +5,7 @@ spring:
   application:
     name: genergy-eam-admin
   profiles:
-    active: ecs
+    active: dev
 
 logging:
   level:
@@ -22,7 +22,6 @@ mybatis-plus:
 
 upload-path:
   files: "D:/uploads/files/"
-  imgs: "D:/uploads/imgs/"
   temp: "D:/uploads/temp/"
 
 ---

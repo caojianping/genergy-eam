@@ -1,6 +1,6 @@
 package net.gichain.genergy.eam.admin.enums;
 
-import lombok.Getter;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
  * 上传文件类型枚举
@@ -21,10 +21,14 @@ public enum UploadTypeEnum {
      */
     IMG_UPLOAD(3);
 
-    @Getter
     private final int value;
 
     UploadTypeEnum(int value) {
         this.value = value;
+    }
+
+    @JsonValue
+    public Integer getValue() {
+        return this.value;
     }
 }

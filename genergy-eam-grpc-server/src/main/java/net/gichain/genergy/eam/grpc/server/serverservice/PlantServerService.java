@@ -18,6 +18,8 @@ import net.gichain.genergy.eam.grpc.server.service.IPlantAssetViewService;
 import net.gichain.genergy.vo.plant.PlantOverview;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Date;
+
 @Slf4j
 @GrpcService
 public class PlantServerService extends PlantServiceGrpc.PlantServiceImplBase {
@@ -44,7 +46,6 @@ public class PlantServerService extends PlantServiceGrpc.PlantServiceImplBase {
         log.info(String.format("获取电站上网电价 view: %s", plantAssetView));
         if (plantAssetView == null) {
             GrpcResponse.failure(CodeEnum.ASSET_INEXISTENCE, responseObserver);
-            return;
         } else {
             PlantElectricityDTO result = PlantElectricityDTO.convertFromView(plantAssetView);
             log.info(String.format("获取电站上网电价 result: %s", result));
@@ -78,17 +79,15 @@ public class PlantServerService extends PlantServiceGrpc.PlantServiceImplBase {
 
     private static PlantOverview convertToPlantOverview(PlantAssetSplitView view) {
         PlantOverview result = new PlantOverview();
-        result.setImageUrl(view.getImgs());
         result.setInstallationAddress(String.format("%s%s%s%s", view.getProvince(), view.getCity(), view.getDistrict(), view.getAddress()));
         result.setCoordinate(view.getLongitude() + "," + view.getLatitude());
         result.setInstalledCapacity(view.getInstalledPower().toString());
         result.setCapacityUnit("kW");
-        result.setTotalShares(view.getTotalShares());
         result.setEstimatedAnnualEnergy(view.getEstimatedAnnualEnergy().toString());
         result.setEstimatedAnnualEnergyUnit("kWh");
         result.setElectricityPrice(view.getElectricityPrice().toString());
         result.setGridConnectedDate(DateUtils.dateToStr(view.getGridConnectedDate(), "yyyy-MM-dd"));
-        result.setInstallationDate("");
+        result.setInstallationDate(DateUtils.dateToStr(view.getGridConnectedDate(), "yyyy-MM-dd"));
         result.setResidualEnergyTerm(view.getResidualEnergyTerm());
         result.setInverterSupplier(view.getInverterSupplier());
         result.setComponentSupplier(view.getComponentSupplier());
@@ -96,6 +95,8 @@ public class PlantServerService extends PlantServiceGrpc.PlantServiceImplBase {
         result.setOperatingCompany("合肥达链");
         result.setConstructionCompany(view.getConstructionCompany());
         result.setOriginalOwner(view.getCompanyName());
+        result.setImageUrl(view.getImgs());
+        result.setTotalShares(view.getTotalShares());
         return result;
     }
 }

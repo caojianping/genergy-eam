@@ -1,17 +1,17 @@
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Starting GenergyEamGrpcServerApplicationTests on DESKTOP-VC4LELU with PID 23352 (started by cjp in D:\code\2020\genergy\genergy-eam\genergy-eam-grpc-server)
-2020/06/23 [main] DEBUG n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - The following profiles are active: dev
-2020/06/23 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2020/06/23 [main] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@2e766822 is available -> Added to the NameResolverRegistry
-2020/06/23 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.EnergyService, bean: energyServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.EnergyServerService
-2020/06/23 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.PlantService, bean: plantServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.PlantServerService
-2020/06/23 [main] WARN  o.s.w.context.support.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'shadedNettyGrpcServerLifecycle'; nested exception is java.lang.IllegalStateException: Failed to start the grpc server
-2020/06/23 [main] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@2e766822 was removed from the NameResolverRegistry
-2020/06/23 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2020/06/23 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+2020/06/29 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Starting GenergyEamGrpcServerApplicationTests on DESKTOP-VC4LELU with PID 11492 (started by cjp in D:\code\2020\genergy\genergy-eam\genergy-eam-grpc-server)
+2020/06/29 [main] DEBUG n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020/06/29 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - The following profiles are active: dev
+2020/06/29 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020/06/29 [main] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@7978e022 is available -> Added to the NameResolverRegistry
+2020/06/29 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.EnergyService, bean: energyServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.EnergyServerService
+2020/06/29 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.PlantService, bean: plantServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.PlantServerService
+2020/06/29 [main] WARN  o.s.w.context.support.GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'shadedNettyGrpcServerLifecycle'; nested exception is java.lang.IllegalStateException: Failed to start the grpc server
+2020/06/29 [main] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@7978e022 was removed from the NameResolverRegistry
+2020/06/29 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020/06/29 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2020/06/23 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+2020/06/29 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
 org.springframework.context.ApplicationContextException: Failed to start bean 'shadedNettyGrpcServerLifecycle'; nested exception is java.lang.IllegalStateException: Failed to start the grpc server
 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:185)
 	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
@@ -123,7 +123,7 @@ Caused by: java.net.BindException: Address already in use: bind
 	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-2020/06/23 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@1c742ed4] to prepare test instance [net.gichain.genergy.eam.grpc.server.GenergyEamGrpcServerApplicationTests@2f677247]
+2020/06/29 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@1c742ed4] to prepare test instance [net.gichain.genergy.eam.grpc.server.GenergyEamGrpcServerApplicationTests@286855ea]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
@@ -238,63 +238,27 @@ Caused by: java.net.BindException: Address already in use: bind
 	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Starting GenergyEamGrpcServerApplicationTests on DESKTOP-VC4LELU with PID 26324 (started by cjp in D:\code\2020\genergy\genergy-eam\genergy-eam-grpc-server)
-2020/06/23 [main] DEBUG n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - The following profiles are active: dev
-2020/06/23 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2020/06/23 [main] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@480b57e2 is available -> Added to the NameResolverRegistry
-2020/06/23 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.EnergyService, bean: energyServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.EnergyServerService
-2020/06/23 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.PlantService, bean: plantServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.PlantServerService
-2020/06/23 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 7002
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Started GenergyEamGrpcServerApplicationTests in 6.036 seconds (JVM running for 7.316)
-2020/06/23 [SpringContextShutdownHook] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC server shutdown.
-2020/06/23 [SpringContextShutdownHook] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@480b57e2 was removed from the NameResolverRegistry
-2020/06/23 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Starting GenergyEamGrpcServerApplicationTests on DESKTOP-VC4LELU with PID 1668 (started by cjp in D:\code\2020\genergy\genergy-eam\genergy-eam-grpc-server)
-2020/06/23 [main] DEBUG n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - The following profiles are active: dev
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Starting GenergyEamGrpcServerApplicationTests on DESKTOP-VC4LELU with PID 22732 (started by cjp in D:\code\2020\genergy\genergy-eam\genergy-eam-grpc-server)
-2020/06/23 [main] DEBUG n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - The following profiles are active: dev
-2020/06/23 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2020/06/23 [main] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@7219ac49 is available -> Added to the NameResolverRegistry
-2020/06/23 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.EnergyService, bean: energyServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.EnergyServerService
-2020/06/23 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.PlantService, bean: plantServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.PlantServerService
-2020/06/23 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2020/06/23 [main] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@12f49ca8 is available -> Added to the NameResolverRegistry
-2020/06/23 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.EnergyService, bean: energyServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.EnergyServerService
-2020/06/23 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.PlantService, bean: plantServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.PlantServerService
-2020/06/23 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 7002
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Started GenergyEamGrpcServerApplicationTests in 11.881 seconds (JVM running for 13.966)
-2020/06/23 [SpringContextShutdownHook] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC server shutdown.
-2020/06/23 [SpringContextShutdownHook] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@7219ac49 was removed from the NameResolverRegistry
-2020/06/23 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2020/06/23 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 7002
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Started GenergyEamGrpcServerApplicationTests in 10.976 seconds (JVM running for 13.209)
-2020/06/23 [SpringContextShutdownHook] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC server shutdown.
-2020/06/23 [SpringContextShutdownHook] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@12f49ca8 was removed from the NameResolverRegistry
-2020/06/23 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Starting GenergyEamGrpcServerApplicationTests on DESKTOP-VC4LELU with PID 24188 (started by cjp in D:\code\2020\genergy\genergy-eam\genergy-eam-grpc-server)
-2020/06/23 [main] DEBUG n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - The following profiles are active: dev
-2020/06/23 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2020/06/23 [main] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@12f49ca8 is available -> Added to the NameResolverRegistry
-2020/06/23 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.EnergyService, bean: energyServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.EnergyServerService
-2020/06/23 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.PlantService, bean: plantServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.PlantServerService
-2020/06/23 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 7002
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Started GenergyEamGrpcServerApplicationTests in 6.376 seconds (JVM running for 7.621)
-2020/06/23 [SpringContextShutdownHook] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC server shutdown.
-2020/06/23 [SpringContextShutdownHook] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@12f49ca8 was removed from the NameResolverRegistry
-2020/06/23 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Starting GenergyEamGrpcServerApplicationTests on DESKTOP-VC4LELU with PID 10652 (started by cjp in D:\code\2020\genergy\genergy-eam\genergy-eam-grpc-server)
-2020/06/23 [main] DEBUG n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - The following profiles are active: dev
-2020/06/23 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2020/06/23 [main] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@12f49ca8 is available -> Added to the NameResolverRegistry
-2020/06/23 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.EnergyService, bean: energyServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.EnergyServerService
-2020/06/23 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.PlantService, bean: plantServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.PlantServerService
-2020/06/23 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 7002
-2020/06/23 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Started GenergyEamGrpcServerApplicationTests in 6.023 seconds (JVM running for 7.233)
-2020/06/23 [SpringContextShutdownHook] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC server shutdown.
-2020/06/23 [SpringContextShutdownHook] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@12f49ca8 was removed from the NameResolverRegistry
-2020/06/23 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020/06/29 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Starting GenergyEamGrpcServerApplicationTests on DESKTOP-VC4LELU with PID 2516 (started by cjp in D:\code\2020\genergy\genergy-eam\genergy-eam-grpc-server)
+2020/06/29 [main] DEBUG n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020/06/29 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - The following profiles are active: dev
+2020/06/29 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020/06/29 [main] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@28757abd is available -> Added to the NameResolverRegistry
+2020/06/29 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.EnergyService, bean: energyServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.EnergyServerService
+2020/06/29 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.PlantService, bean: plantServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.PlantServerService
+2020/06/29 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 7002
+2020/06/29 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Started GenergyEamGrpcServerApplicationTests in 6.767 seconds (JVM running for 8.23)
+2020/06/29 [SpringContextShutdownHook] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC server shutdown.
+2020/06/29 [SpringContextShutdownHook] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@28757abd was removed from the NameResolverRegistry
+2020/06/29 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020/06/29 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Starting GenergyEamGrpcServerApplicationTests on DESKTOP-VC4LELU with PID 2844 (started by cjp in D:\code\2020\genergy\genergy-eam\genergy-eam-grpc-server)
+2020/06/29 [main] DEBUG n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020/06/29 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - The following profiles are active: dev
+2020/06/29 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020/06/29 [main] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@5f174dd2 is available -> Added to the NameResolverRegistry
+2020/06/29 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.EnergyService, bean: energyServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.EnergyServerService
+2020/06/29 [main] INFO  n.d.b.g.s.serverfactory.AbstractGrpcServerFactory - Registered gRPC service: net.gichain.genergy.eam.grpc.lib.PlantService, bean: plantServerService, class: net.gichain.genergy.eam.grpc.server.serverservice.PlantServerService
+2020/06/29 [main] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC Server started, listening on address: *, port: 7002
+2020/06/29 [main] INFO  n.g.g.e.g.s.GenergyEamGrpcServerApplicationTests - Started GenergyEamGrpcServerApplicationTests in 6.251 seconds (JVM running for 7.483)
+2020/06/29 [SpringContextShutdownHook] INFO  n.d.b.g.server.serverfactory.GrpcServerLifecycle - gRPC server shutdown.
+2020/06/29 [SpringContextShutdownHook] INFO  n.d.b.g.c.nameresolver.NameResolverRegistration - net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory@5f174dd2 was removed from the NameResolverRegistry
+2020/06/29 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'

@@ -1,7 +1,6 @@
 package net.gichain.genergy.eam.database.entity;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -94,7 +93,12 @@ public class Plant implements Serializable {
     private BigDecimal estimatedAnnualEnergyMaxEarningsRate;
 
     /**
-     * 上网电价（精确到分），单位元
+     * 累计发电量，单位kWh
+     */
+    private BigDecimal totalEnergy;
+
+    /**
+     * 上网电价，单位元
      */
     private BigDecimal electricityPrice;
 
@@ -189,16 +193,6 @@ public class Plant implements Serializable {
     private String collectorModel;
 
     /**
-     * 图片信息
-     */
-    private String imgs;
-
-    /**
-     * 描述信息
-     */
-    private String description;
-
-    /**
      * 创建时间
      */
     private Date createTime;
@@ -213,6 +207,4 @@ public class Plant implements Serializable {
      */
     @TableField(value = "is_delete")
     private Boolean deleted;
-
-
 }

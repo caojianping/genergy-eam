@@ -27,18 +27,6 @@ public class PlantAssetSplitView implements Serializable {
     private String id;
 
     /**
-     * 电站编号
-     */
-    private String plantId;
-
-    /**
-     * 资产id
-     */
-    private Long assetId;
-
-    private Long assetSplitId;
-
-    /**
      * 装机功率，单位kWp
      */
     private BigDecimal installedPower;
@@ -129,9 +117,9 @@ public class PlantAssetSplitView implements Serializable {
     private String collectorModel;
 
     /**
-     * 图片信息
+     * 资产编号
      */
-    private String imgs;
+    private Long assetId;
 
     /**
      * 企业名称，业主名称
@@ -139,9 +127,17 @@ public class PlantAssetSplitView implements Serializable {
     private String companyName;
 
     /**
+     * 图片信息
+     */
+    private String imgs;
+
+    /**
+     * 资产拆分编号
+     */
+    private Long assetSplitId;
+
+    /**
      * 组件总份额
      */
     private Integer totalShares;
-
-
 }

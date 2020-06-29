@@ -3,6 +3,7 @@ package net.gichain.genergy.eam.admin.controller;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import lombok.extern.slf4j.Slf4j;
 import net.gichain.genergy.eam.admin.controller.dto.AssetDTO;
+import net.gichain.genergy.eam.admin.controller.vo.AssetAuditVO;
 import net.gichain.genergy.eam.admin.controller.vo.AssetVO;
 import net.gichain.genergy.eam.admin.service.IAssetService;
 import net.gichain.genergy.eam.admin.service.IPlantAssetViewService;
@@ -47,7 +48,7 @@ public class AssetController extends BaseController {
     }
 
     @TokenAnnotation
-    @PostMapping("/detail/{id}")
+    @GetMapping("/detail/{id}")
     @ResponseBody
     public PlantAssetView detail(@PathVariable(name = "id") long id) {
         log.info(String.format("/asset/detail id: %d", id));
@@ -66,21 +67,18 @@ public class AssetController extends BaseController {
     @TokenAnnotation
     @PostMapping("/submit")
     @ResponseBody
-    public boolean submit(@RequestBody AssetVO assetVO) throws BusinessException, TokenException {
+    public boolean submit(@RequestBody @Valid AssetVO assetVO) throws BusinessException, TokenException {
         Integer userId = this.getUserId();
         log.info(String.format("/asset/submit userId, assetVO: %d %s", userId, assetVO));
         return assetService.saveCombinedData(userId, assetVO, true);
     }
 
     @TokenAnnotation
-    @PostMapping("/setStatus/{id}/{status}")
+    @PostMapping("/setStatus")
     @ResponseBody
-    public boolean setStatus(
-            @PathVariable(name = "id") long id,
-            @PathVariable(name = "status") AssetStatusEnum status
-    ) throws BusinessException, TokenException {
+    public boolean setStatus(@RequestBody @Valid AssetAuditVO assetAuditVO) throws BusinessException, TokenException {
         Integer userId = this.getUserId();
-        log.info(String.format("/asset/setStatus userId, id, status: %d %d %d", userId, id, status));
-        return assetService.setStatus(userId, id, status);
+        log.info(String.format("/asset/setStatus userId, id, assetAuditVO: %d %s", userId, assetAuditVO));
+        return assetService.setStatus(userId, assetAuditVO);
     }
 }
