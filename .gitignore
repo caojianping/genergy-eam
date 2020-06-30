@@ -30,4 +30,5 @@ build/
 ### VS Code ###
 .vscode/
 
+logs/
 !genergy-eam-grpc-lib/target/
