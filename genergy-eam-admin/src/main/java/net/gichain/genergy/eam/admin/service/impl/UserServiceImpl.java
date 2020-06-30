@@ -107,6 +107,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
         Page<User> pageParameters = new Page<User>(current, size);
         QueryWrapper<User> queryParameters = new QueryWrapper<User>();
+        queryParameters.eq("is_delete", 0);
         if (!StringUtils.isNullOrEmpty(username)) {
             queryParameters = queryParameters.like("username", username);
         }
@@ -124,6 +125,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Override
     public User getUserByUsername(String username) {
         QueryWrapper<User> wrapper = new QueryWrapper<User>();
+        wrapper.eq("is_delete", 0);
         wrapper.eq("username", username);
         return this.getOne(wrapper);
     }
@@ -180,7 +182,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         User user = new User();
         user.setId(userUpdateVO.getId());
         user.setUsername(userUpdateVO.getUsername());
-        user.setPassword(userUpdateVO.getPassword());
         return this.updateById(user);
     }
 
@@ -201,7 +202,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 //        if (Pattern.matches(RegexConstants.REGEX_PASSWORD, newPwd)) {
 //            throw new BusinessException(CodeEnum.INVALID_PASSWORD);
 //        }
-        if (newPwd.equals(confirmPwd)) {
+        if (!newPwd.equals(confirmPwd)) {
             throw new BusinessException(CodeEnum.INCONFORMITY_PASSWORDS);
         }
 

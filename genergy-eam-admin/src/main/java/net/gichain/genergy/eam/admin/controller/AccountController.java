@@ -48,7 +48,7 @@ public class AccountController extends BaseController {
     }
 
     @TokenAnnotation
-    @PostMapping("/logout")
+    @GetMapping("/logout")
     @ResponseBody
     public boolean logout() {
         return true;
