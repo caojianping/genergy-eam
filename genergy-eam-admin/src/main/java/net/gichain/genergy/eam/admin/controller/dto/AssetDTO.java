@@ -70,6 +70,7 @@ public class AssetDTO {
         return viewPage.convert(view -> {
             AssetDTO dto = new AssetDTO();
             BeanUtils.copyProperties(view, dto);
+            dto.setAuditTime(view.getPutawayTime());
             return dto;
         });
     }

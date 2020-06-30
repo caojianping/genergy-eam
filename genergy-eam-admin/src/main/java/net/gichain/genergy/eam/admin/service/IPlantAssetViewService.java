@@ -18,6 +18,8 @@ import net.gichain.genergy.eam.database.entity.PlantAssetView;
 public interface IPlantAssetViewService extends IService<PlantAssetView> {
     boolean isExist(long assetId);
 
+    boolean isExistByPlantName(String plantName);
+
     IPage<AssetDTO> pageAssets(
             int current,
             int size,

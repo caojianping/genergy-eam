@@ -59,6 +59,8 @@ public class AssetServiceImpl extends ServiceImpl<AssetMapper, Asset> implements
                 throw new BusinessException(CodeEnum.PLANT_ID_REQUIRED);
             }
 
+            // 临时加个guid
+            asset.setCoinType(UUIDUtils.randomWords(6, false));
             asset.setPlantId(plantId);
             asset.setPutawaySerial(UUIDUtils.randomWords(16, false));
             asset.setCreateTime(new Date());

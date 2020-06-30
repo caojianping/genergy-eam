@@ -33,6 +33,12 @@ public class PlantAssetViewServiceImpl extends ServiceImpl<PlantAssetViewMapper,
     }
 
     @Override
+    public boolean isExistByPlantName(String plantName) {
+        PlantAssetView view = this.getOne(new QueryWrapper<PlantAssetView>().eq("plant_name", plantName));
+        return view != null;
+    }
+
+    @Override
     public IPage<AssetDTO> pageAssets(
             int current,
             int size,

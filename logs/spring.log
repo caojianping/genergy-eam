@@ -4312,3 +4312,514 @@
 2020/06/30 [http-nio-7001-exec-7] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: true
 2020/06/30 [http-nio-7001-exec-7] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, true
 2020/06/30 [http-nio-7001-exec-7] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: net.gichain.genergy.eam.common.JsonResult@4b6b8769
+2020/06/30 [restartedMain] INFO  n.g.genergy.eam.admin.GenergyEamAdminApplication - Starting GenergyEamAdminApplication on DESKTOP-VC4LELU with PID 14552 (D:\code\2020\genergy\genergy-eam\genergy-eam-admin\target\classes started by cjp in D:\code\2020\genergy\genergy-eam)
+2020/06/30 [restartedMain] DEBUG n.g.genergy.eam.admin.GenergyEamAdminApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020/06/30 [restartedMain] INFO  n.g.genergy.eam.admin.GenergyEamAdminApplication - The following profiles are active: dev
+2020/06/30 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020/06/30 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020/06/30 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7001 (http)
+2020/06/30 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020/06/30 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020/06/30 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020/06/30 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2995 ms
+2020/06/30 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020/06/30 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 7001 (http) with context path ''
+2020/06/30 [restartedMain] INFO  n.g.genergy.eam.admin.GenergyEamAdminApplication - Started GenergyEamAdminApplication in 7.146 seconds (JVM running for 7.887)
+2020/06/30 [http-nio-7001-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020/06/30 [http-nio-7001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020/06/30 [http-nio-7001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: null
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: null
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isAnnotationPresent(): false
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求IP：0:0:0:0:0:0:0:1
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求地址：http://localhost:7001/account/login
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求方法：POST
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求类方法 : net.gichain.genergy.eam.admin.controller.AccountController.login
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求参数：[UserAddVO(username=admin, password=1234567a)]
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.controller.AccountController - /user/login userAddVO: UserAddVO(username=admin, password=1234567a)
+2020/06/30 [http-nio-7001-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.createToken issuedDate: 2020-06-30 10:42:33
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.createToken expireDate: 2020-06-30 11:42:33
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求耗时：1088毫秒
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 响应值 : eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-1] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-1] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: {"code":0,"data":"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY","message":"操作成功","trace":"fa310602213e48dd92bfb01300621aa9"}
+2020/06/30 [http-nio-7001-exec-2] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: null
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isAnnotationPresent(): true
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor required(): true
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor userId: 3
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExist: true
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired expiration: 2020-06-30 11:42:33
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired now: 2020-06-30 10:42:36
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired before: false
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExpired: false
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求IP：0:0:0:0:0:0:0:1
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求地址：http://localhost:7001/asset/page/1/10
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求方法：GET
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求类方法 : net.gichain.genergy.eam.admin.controller.AssetController.pageAssets
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求参数：[1, 10, null, null, null, null, null]
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page current, size: 1 10
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page putawaySerial,plantName,submitter,auditor,stauts: null null null null null
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.g.e.a.service.impl.PlantAssetViewServiceImpl - pageAssets queryParameters:com.baomidou.mybatisplus.core.conditions.query.QueryWrapper@46058787
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求耗时：153毫秒
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 响应值 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@20f12cb8
+2020/06/30 [http-nio-7001-exec-3] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: com.baomidou.mybatisplus.extension.plugins.pagination.Page@20f12cb8
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, com.baomidou.mybatisplus.extension.plugins.pagination.Page@20f12cb8
+2020/06/30 [http-nio-7001-exec-3] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: net.gichain.genergy.eam.common.JsonResult@447df22c
+2020/06/30 [http-nio-7001-exec-4] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: null
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isAnnotationPresent(): true
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor required(): true
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor userId: 3
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExist: true
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired expiration: 2020-06-30 11:42:33
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired now: 2020-06-30 10:42:58
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired before: false
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExpired: false
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求IP：0:0:0:0:0:0:0:1
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求地址：http://localhost:7001/asset/save
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求方法：POST
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求类方法 : net.gichain.genergy.eam.admin.controller.AssetController.save
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求参数：[AssetVO(id=null, psId=ps007, code=sn007, plantName=测试电站名称七, plantType=2, plantStatus=1, installedPower=4325678, estimatedAnnualEnergy=null, actualAnnualEnergy=null, estimatedAnnualEnergyEarnings=null, actualAnnualEnergyEarnings=null, estimatedAnnualEnergyMinEarningsRate=null, estimatedAnnualEnergyMaxEarningsRate=null, electricityPrice=null, energyTerm=null, residualEnergyTerm=null, constructionCompany=null, completedDate=null, gridConnectedDate=null, province=null, city=null, district=null, address=null, componentTotal=null, componentSupplier=null, componentModel=null, inverterSupplier=null, inverterModel=null, collectorSupplier=null, collectorModel=null, assetId=null, assetName=测试电站名称七, companyName=null, companyType=null, companyAddress=null, corpName=null, corpCertType=null, corpCertNo=null, plantConstructionValue=null, plantPresellValue=null, plantDepreciationRate=null, plantFeature=null, description=null, certFiles=, legalFiles=, imgs=)]
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/save userId, assetVO: 3 AssetVO(id=null, psId=ps007, code=sn007, plantName=测试电站名称七, plantType=2, plantStatus=1, installedPower=4325678, estimatedAnnualEnergy=null, actualAnnualEnergy=null, estimatedAnnualEnergyEarnings=null, actualAnnualEnergyEarnings=null, estimatedAnnualEnergyMinEarningsRate=null, estimatedAnnualEnergyMaxEarningsRate=null, electricityPrice=null, energyTerm=null, residualEnergyTerm=null, constructionCompany=null, completedDate=null, gridConnectedDate=null, province=null, city=null, district=null, address=null, componentTotal=null, componentSupplier=null, componentModel=null, inverterSupplier=null, inverterModel=null, collectorSupplier=null, collectorModel=null, assetId=null, assetName=测试电站名称七, companyName=null, companyType=null, companyAddress=null, corpName=null, corpCertType=null, corpCertNo=null, plantConstructionValue=null, plantPresellValue=null, plantDepreciationRate=null, plantFeature=null, description=null, certFiles=, legalFiles=, imgs=)
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.g.eam.admin.service.impl.AssetServiceImpl - plantId:7611938844
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.g.eam.admin.service.impl.AssetServiceImpl - saveAsset asset:Asset(id=null, coinType=null, plantId=7611938844, putawaySerial=uHOUIZMEvq6Ev7xU, name=测试电站名称七, companyName=null, companyType=null, companyAddress=null, corpName=null, corpCertType=null, corpCertNo=null, plantConstructionValue=null, plantPresellValue=null, plantDepreciationRate=null, plantFeature=null, description=null, certFiles=, legalFiles=, imgs=, status=CREATED, submitBy=null, submitTime=null, auditBy=null, auditRemark=null, putawayTime=null, createTime=Tue Jun 30 10:42:58 CST 2020, modifyTime=null, deleted=false)
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.g.eam.admin.service.impl.PlantServiceImpl - savePlant plant:Plant(id=7611938844, psId=ps007, code=sn007, name=测试电站名称七, type=HOUSEHOLD_STORED_ENERGY, status=ENABLED, installedPower=4325678, estimatedAnnualEnergy=null, actualAnnualEnergy=null, estimatedAnnualEnergyEarnings=null, actualAnnualEnergyEarnings=null, estimatedAnnualEnergyMinEarningsRate=null, estimatedAnnualEnergyMaxEarningsRate=null, totalEnergy=null, electricityPrice=null, energyTerm=null, residualEnergyTerm=null, constructionCompany=null, completedDate=null, gridConnectedDate=null, province=null, city=null, district=null, address=null, longitude=null, latitude=null, componentTotal=null, componentSupplier=null, componentModel=null, inverterSupplier=null, inverterModel=null, collectorSupplier=null, collectorModel=null, createTime=Tue Jun 30 10:42:58 CST 2020, modifyTime=null, deleted=false)
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求耗时：172毫秒
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 响应值 : true
+2020/06/30 [http-nio-7001-exec-5] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: true
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, true
+2020/06/30 [http-nio-7001-exec-5] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: net.gichain.genergy.eam.common.JsonResult@3f19d1d7
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isAnnotationPresent(): true
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor required(): true
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor userId: 3
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExist: true
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired expiration: 2020-06-30 11:42:33
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired now: 2020-06-30 10:42:59
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired before: false
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExpired: false
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求IP：0:0:0:0:0:0:0:1
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求地址：http://localhost:7001/asset/page/1/10
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求方法：GET
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求类方法 : net.gichain.genergy.eam.admin.controller.AssetController.pageAssets
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求参数：[1, 10, null, null, null, null, null]
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page current, size: 1 10
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page putawaySerial,plantName,submitter,auditor,stauts: null null null null null
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.g.e.a.service.impl.PlantAssetViewServiceImpl - pageAssets queryParameters:com.baomidou.mybatisplus.core.conditions.query.QueryWrapper@219bc2fa
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求耗时：32毫秒
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 响应值 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@1cf2a695
+2020/06/30 [http-nio-7001-exec-6] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: com.baomidou.mybatisplus.extension.plugins.pagination.Page@1cf2a695
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, com.baomidou.mybatisplus.extension.plugins.pagination.Page@1cf2a695
+2020/06/30 [http-nio-7001-exec-6] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: net.gichain.genergy.eam.common.JsonResult@7ac978d
+2020/06/30 [Thread-160] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020/06/30 [restartedMain] INFO  n.g.genergy.eam.admin.GenergyEamAdminApplication - Starting GenergyEamAdminApplication on DESKTOP-VC4LELU with PID 14552 (D:\code\2020\genergy\genergy-eam\genergy-eam-admin\target\classes started by cjp in D:\code\2020\genergy\genergy-eam)
+2020/06/30 [restartedMain] DEBUG n.g.genergy.eam.admin.GenergyEamAdminApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020/06/30 [restartedMain] INFO  n.g.genergy.eam.admin.GenergyEamAdminApplication - The following profiles are active: dev
+2020/06/30 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7001 (http)
+2020/06/30 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020/06/30 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020/06/30 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020/06/30 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1033 ms
+2020/06/30 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'assetController': Unsatisfied dependency expressed through field 'plantAssetViewService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'net.gichain.genergy.eam.admin.service.IPlantAssetViewService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020/06/30 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020/06/30 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020/06/30 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field plantAssetViewService in net.gichain.genergy.eam.admin.controller.AssetController required a bean of type 'net.gichain.genergy.eam.admin.service.IPlantAssetViewService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'net.gichain.genergy.eam.admin.service.IPlantAssetViewService' in your configuration.
+
+2020/06/30 [restartedMain] WARN  org.springframework.boot.SpringApplication - Unable to close ApplicationContext
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'applicationAvailability' defined in class path resource [org/springframework/boot/autoconfigure/availability/ApplicationAvailabilityAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:512) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:245) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:197) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:81) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:67) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:167) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:814) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at net.gichain.genergy.eam.admin.GenergyEamAdminApplication.main(GenergyEamAdminApplication.java:12) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251) ~[spring-aop-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1141) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1114) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:506) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 23 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:814) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1282) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:297) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor.postProcessBeforeInitialization(ConfigurationClassPostProcessor.java:456) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 45 common frames omitted
+2020/06/30 [restartedMain] INFO  n.g.genergy.eam.admin.GenergyEamAdminApplication - Starting GenergyEamAdminApplication on DESKTOP-VC4LELU with PID 14552 (D:\code\2020\genergy\genergy-eam\genergy-eam-admin\target\classes started by cjp in D:\code\2020\genergy\genergy-eam)
+2020/06/30 [restartedMain] DEBUG n.g.genergy.eam.admin.GenergyEamAdminApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020/06/30 [restartedMain] INFO  n.g.genergy.eam.admin.GenergyEamAdminApplication - The following profiles are active: dev
+2020/06/30 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7001 (http)
+2020/06/30 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020/06/30 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020/06/30 [restartedMain] INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020/06/30 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1039 ms
+2020/06/30 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020/06/30 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 7001 (http) with context path ''
+2020/06/30 [restartedMain] INFO  n.g.genergy.eam.admin.GenergyEamAdminApplication - Started GenergyEamAdminApplication in 2.531 seconds (JVM running for 589.57)
+2020/06/30 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020/06/30 [http-nio-7001-exec-1] INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020/06/30 [http-nio-7001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020/06/30 [http-nio-7001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isAnnotationPresent(): true
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor required(): true
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor userId: 3
+2020/06/30 [http-nio-7001-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExist: true
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired expiration: 2020-06-30 11:42:33
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired now: 2020-06-30 10:55:48
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired before: false
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExpired: false
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求IP：0:0:0:0:0:0:0:1
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求地址：http://localhost:7001/asset/page/1/10
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求方法：GET
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求类方法 : net.gichain.genergy.eam.admin.controller.AssetController.pageAssets
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求参数：[1, 10, null, null, null, null, null]
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page current, size: 1 10
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page putawaySerial,plantName,submitter,auditor,stauts: null null null null null
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.g.e.a.service.impl.PlantAssetViewServiceImpl - pageAssets queryParameters:com.baomidou.mybatisplus.core.conditions.query.QueryWrapper@5cb46ac6
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求耗时：61毫秒
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 响应值 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@75125d5c
+2020/06/30 [http-nio-7001-exec-1] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: com.baomidou.mybatisplus.extension.plugins.pagination.Page@75125d5c
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, com.baomidou.mybatisplus.extension.plugins.pagination.Page@75125d5c
+2020/06/30 [http-nio-7001-exec-1] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: net.gichain.genergy.eam.common.JsonResult@1e8d10ad
+2020/06/30 [http-nio-7001-exec-2] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-2] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isAnnotationPresent(): true
+2020/06/30 [http-nio-7001-exec-2] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor required(): true
+2020/06/30 [http-nio-7001-exec-2] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-2] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-2] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor userId: 3
+2020/06/30 [http-nio-7001-exec-2] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExist: true
+2020/06/30 [http-nio-7001-exec-2] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-2] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired expiration: 2020-06-30 11:42:33
+2020/06/30 [http-nio-7001-exec-2] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired now: 2020-06-30 10:56:05
+2020/06/30 [http-nio-7001-exec-2] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired before: false
+2020/06/30 [http-nio-7001-exec-2] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExpired: false
+2020/06/30 [http-nio-7001-exec-2] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求IP：0:0:0:0:0:0:0:1
+2020/06/30 [http-nio-7001-exec-2] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求地址：http://localhost:7001/asset/page/1/10
+2020/06/30 [http-nio-7001-exec-2] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求方法：GET
+2020/06/30 [http-nio-7001-exec-2] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求类方法 : net.gichain.genergy.eam.admin.controller.AssetController.pageAssets
+2020/06/30 [http-nio-7001-exec-2] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求参数：[1, 10, null, null, null, null, null]
+2020/06/30 [http-nio-7001-exec-2] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page current, size: 1 10
+2020/06/30 [http-nio-7001-exec-2] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page putawaySerial,plantName,submitter,auditor,stauts: null null null null null
+2020/06/30 [http-nio-7001-exec-2] INFO  n.g.g.e.a.service.impl.PlantAssetViewServiceImpl - pageAssets queryParameters:com.baomidou.mybatisplus.core.conditions.query.QueryWrapper@57ee9b3
+2020/06/30 [http-nio-7001-exec-2] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求耗时：35毫秒
+2020/06/30 [http-nio-7001-exec-2] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 响应值 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@44d99bbe
+2020/06/30 [http-nio-7001-exec-2] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: com.baomidou.mybatisplus.extension.plugins.pagination.Page@44d99bbe
+2020/06/30 [http-nio-7001-exec-2] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, com.baomidou.mybatisplus.extension.plugins.pagination.Page@44d99bbe
+2020/06/30 [http-nio-7001-exec-2] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: net.gichain.genergy.eam.common.JsonResult@3130e0be
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isAnnotationPresent(): true
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor required(): true
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor userId: 3
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExist: true
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired expiration: 2020-06-30 11:42:33
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired now: 2020-06-30 10:56:11
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired before: false
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExpired: false
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求IP：0:0:0:0:0:0:0:1
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求地址：http://localhost:7001/asset/page/1/10
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求方法：GET
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求类方法 : net.gichain.genergy.eam.admin.controller.AssetController.pageAssets
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求参数：[1, 10, null, null, null, null, null]
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page current, size: 1 10
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page putawaySerial,plantName,submitter,auditor,stauts: null null null null null
+2020/06/30 [http-nio-7001-exec-3] INFO  n.g.g.e.a.service.impl.PlantAssetViewServiceImpl - pageAssets queryParameters:com.baomidou.mybatisplus.core.conditions.query.QueryWrapper@15fc313b
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求耗时：18毫秒
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 响应值 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@9037fc8
+2020/06/30 [http-nio-7001-exec-3] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: com.baomidou.mybatisplus.extension.plugins.pagination.Page@9037fc8
+2020/06/30 [http-nio-7001-exec-3] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, com.baomidou.mybatisplus.extension.plugins.pagination.Page@9037fc8
+2020/06/30 [http-nio-7001-exec-3] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: net.gichain.genergy.eam.common.JsonResult@1a569a56
+2020/06/30 [http-nio-7001-exec-4] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: null
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isAnnotationPresent(): true
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor required(): true
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor userId: 3
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExist: true
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired expiration: 2020-06-30 11:42:33
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired now: 2020-06-30 10:56:21
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired before: false
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExpired: false
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求IP：0:0:0:0:0:0:0:1
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求地址：http://localhost:7001/asset/detail/62
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求方法：GET
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求类方法 : net.gichain.genergy.eam.admin.controller.AssetController.detail
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求参数：[62]
+2020/06/30 [http-nio-7001-exec-5] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/detail id: 62
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求耗时：9毫秒
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 响应值 : PlantAssetView(id=3136363977, psId=100, code=100, plantName=合肥100MW光伏电站1, plantType=DISTRIBUTED_PHOTOVOLTAIC, plantStatus=ENABLED, installedPower=100.00, estimatedAnnualEnergy=100.00, actualAnnualEnergy=100.00, estimatedAnnualEnergyEarnings=100.00, actualAnnualEnergyEarnings=0.00, estimatedAnnualEnergyMinEarningsRate=0.00, estimatedAnnualEnergyMaxEarningsRate=0.00, totalEnergy=0.00, electricityPrice=0.00, energyTerm=0, residualEnergyTerm=0, constructionCompany=null, completedDate=null, gridConnectedDate=null, province=null, city=null, district=null, address=null, longitude=null, latitude=null, componentTotal=null, componentSupplier=null, componentModel=null, inverterSupplier=null, inverterModel=null, collectorSupplier=null, collectorModel=null, assetId=62, coinType=null, putawaySerial=ZiGwycuNL4aY0NEf, companyName=null, companyType=null, companyAddress=null, corpName=null, corpCertType=null, corpCertNo=null, plantConstructionValue=null, plantPresellValue=null, plantDepreciationRate=null, plantFeature=null, description=null, certFiles=, legalFiles=, imgs=, assetStatus=AUDITED, submitterId=3, submitterName=admin, submitTime=Tue Jun 30 10:15:27 CST 2020, auditorId=3, auditorName=admin, auditRemark=null, putawayTime=Tue Jun 30 10:17:07 CST 2020, deleted=false)
+2020/06/30 [http-nio-7001-exec-5] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: PlantAssetView(id=3136363977, psId=100, code=100, plantName=合肥100MW光伏电站1, plantType=DISTRIBUTED_PHOTOVOLTAIC, plantStatus=ENABLED, installedPower=100.00, estimatedAnnualEnergy=100.00, actualAnnualEnergy=100.00, estimatedAnnualEnergyEarnings=100.00, actualAnnualEnergyEarnings=0.00, estimatedAnnualEnergyMinEarningsRate=0.00, estimatedAnnualEnergyMaxEarningsRate=0.00, totalEnergy=0.00, electricityPrice=0.00, energyTerm=0, residualEnergyTerm=0, constructionCompany=null, completedDate=null, gridConnectedDate=null, province=null, city=null, district=null, address=null, longitude=null, latitude=null, componentTotal=null, componentSupplier=null, componentModel=null, inverterSupplier=null, inverterModel=null, collectorSupplier=null, collectorModel=null, assetId=62, coinType=null, putawaySerial=ZiGwycuNL4aY0NEf, companyName=null, companyType=null, companyAddress=null, corpName=null, corpCertType=null, corpCertNo=null, plantConstructionValue=null, plantPresellValue=null, plantDepreciationRate=null, plantFeature=null, description=null, certFiles=, legalFiles=, imgs=, assetStatus=AUDITED, submitterId=3, submitterName=admin, submitTime=Tue Jun 30 10:15:27 CST 2020, auditorId=3, auditorName=admin, auditRemark=null, putawayTime=Tue Jun 30 10:17:07 CST 2020, deleted=false)
+2020/06/30 [http-nio-7001-exec-5] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, PlantAssetView(id=3136363977, psId=100, code=100, plantName=合肥100MW光伏电站1, plantType=DISTRIBUTED_PHOTOVOLTAIC, plantStatus=ENABLED, installedPower=100.00, estimatedAnnualEnergy=100.00, actualAnnualEnergy=100.00, estimatedAnnualEnergyEarnings=100.00, actualAnnualEnergyEarnings=0.00, estimatedAnnualEnergyMinEarningsRate=0.00, estimatedAnnualEnergyMaxEarningsRate=0.00, totalEnergy=0.00, electricityPrice=0.00, energyTerm=0, residualEnergyTerm=0, constructionCompany=null, completedDate=null, gridConnectedDate=null, province=null, city=null, district=null, address=null, longitude=null, latitude=null, componentTotal=null, componentSupplier=null, componentModel=null, inverterSupplier=null, inverterModel=null, collectorSupplier=null, collectorModel=null, assetId=62, coinType=null, putawaySerial=ZiGwycuNL4aY0NEf, companyName=null, companyType=null, companyAddress=null, corpName=null, corpCertType=null, corpCertNo=null, plantConstructionValue=null, plantPresellValue=null, plantDepreciationRate=null, plantFeature=null, description=null, certFiles=, legalFiles=, imgs=, assetStatus=AUDITED, submitterId=3, submitterName=admin, submitTime=Tue Jun 30 10:15:27 CST 2020, auditorId=3, auditorName=admin, auditRemark=null, putawayTime=Tue Jun 30 10:17:07 CST 2020, deleted=false)
+2020/06/30 [http-nio-7001-exec-5] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: net.gichain.genergy.eam.common.JsonResult@697a6b59
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isAnnotationPresent(): true
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor required(): true
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor userId: 3
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExist: true
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired expiration: 2020-06-30 11:42:33
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired now: 2020-06-30 10:56:24
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired before: false
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExpired: false
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求IP：0:0:0:0:0:0:0:1
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求地址：http://localhost:7001/asset/page/1/10
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求方法：GET
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求类方法 : net.gichain.genergy.eam.admin.controller.AssetController.pageAssets
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求参数：[1, 10, null, null, null, null, null]
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page current, size: 1 10
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page putawaySerial,plantName,submitter,auditor,stauts: null null null null null
+2020/06/30 [http-nio-7001-exec-6] INFO  n.g.g.e.a.service.impl.PlantAssetViewServiceImpl - pageAssets queryParameters:com.baomidou.mybatisplus.core.conditions.query.QueryWrapper@7e4f82a7
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求耗时：18毫秒
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 响应值 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@32032b9a
+2020/06/30 [http-nio-7001-exec-6] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: com.baomidou.mybatisplus.extension.plugins.pagination.Page@32032b9a
+2020/06/30 [http-nio-7001-exec-6] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, com.baomidou.mybatisplus.extension.plugins.pagination.Page@32032b9a
+2020/06/30 [http-nio-7001-exec-6] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: net.gichain.genergy.eam.common.JsonResult@305bddc7
+2020/06/30 [http-nio-7001-exec-7] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: null
+2020/06/30 [http-nio-7001-exec-8] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-8] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isAnnotationPresent(): true
+2020/06/30 [http-nio-7001-exec-8] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor required(): true
+2020/06/30 [http-nio-7001-exec-8] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-8] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-8] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor userId: 3
+2020/06/30 [http-nio-7001-exec-8] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExist: true
+2020/06/30 [http-nio-7001-exec-8] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-8] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired expiration: 2020-06-30 11:42:33
+2020/06/30 [http-nio-7001-exec-8] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired now: 2020-06-30 10:56:26
+2020/06/30 [http-nio-7001-exec-8] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired before: false
+2020/06/30 [http-nio-7001-exec-8] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExpired: false
+2020/06/30 [http-nio-7001-exec-8] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求IP：0:0:0:0:0:0:0:1
+2020/06/30 [http-nio-7001-exec-8] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求地址：http://localhost:7001/asset/detail/57
+2020/06/30 [http-nio-7001-exec-8] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求方法：GET
+2020/06/30 [http-nio-7001-exec-8] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求类方法 : net.gichain.genergy.eam.admin.controller.AssetController.detail
+2020/06/30 [http-nio-7001-exec-8] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求参数：[57]
+2020/06/30 [http-nio-7001-exec-8] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/detail id: 57
+2020/06/30 [http-nio-7001-exec-8] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求耗时：21毫秒
+2020/06/30 [http-nio-7001-exec-8] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 响应值 : PlantAssetView(id=3436455351, psId=ps004, code=sn004, plantName=测试电站名称四, plantType=DISTRIBUTED_PHOTOVOLTAIC, plantStatus=ENABLED, installedPower=2345678.00, estimatedAnnualEnergy=12000.00, actualAnnualEnergy=10000.00, estimatedAnnualEnergyEarnings=100000.00, actualAnnualEnergyEarnings=80000.00, estimatedAnnualEnergyMinEarningsRate=0.10, estimatedAnnualEnergyMaxEarningsRate=0.20, totalEnergy=0.00, electricityPrice=0.50, energyTerm=99, residualEnergyTerm=98, constructionCompany=测试建设公司一, completedDate=Wed Jun 10 00:00:00 CST 2020, gridConnectedDate=Tue Jun 16 00:00:00 CST 2020, province=安徽省, city=合肥市, district=蜀山区, address=创新国际, longitude=null, latitude=null, componentTotal=99, componentSupplier=测试组件厂家一, componentModel=测试组件型号一, inverterSupplier=测试逆变器一, inverterModel=测试逆变器型号一, collectorSupplier=测试采集器厂家一, collectorModel=测试采集器型号一, assetId=57, coinType=null, putawaySerial=mCFEdfx6uQkPMHna, companyName=测试业主一, companyType=PRIVATE_COMPANY, companyAddress=哈哈地址, corpName=张三, corpCertType=PASSPORT, corpCertNo=342529199109890012, plantConstructionValue=120000.00, plantPresellValue=128009.00, plantDepreciationRate=0.87, plantFeature=高效、快捷、环保, description=佳俊坑爹啊载人, certFiles=1_1_29ab530c54a249508dc7174a754e228f.png,1_2_5303352446d547fa9c96283da8733c91.jpg,1_3_45d209b08a384881aa473e4c39eaf641.jpg, legalFiles=2_1_5e001ff6f2a24d23940e0e511f21775d.pdf, imgs=3_a60ee6bb889f4e899a98df647490c780.jpg,3_62a5c1e68ce54734a3166f5c71b99d7b.jpg,3_64cf634af0954b1d884e72b2a1eb9c6c.jpg,3_dab91d95ce464c5e97a082eea2ce45af.jpg, assetStatus=AUDITED, submitterId=3, submitterName=admin, submitTime=Mon Jun 29 23:45:35 CST 2020, auditorId=3, auditorName=admin, auditRemark=11rffwfewf, putawayTime=Mon Jun 29 23:47:10 CST 2020, deleted=false)
+2020/06/30 [http-nio-7001-exec-8] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: PlantAssetView(id=3436455351, psId=ps004, code=sn004, plantName=测试电站名称四, plantType=DISTRIBUTED_PHOTOVOLTAIC, plantStatus=ENABLED, installedPower=2345678.00, estimatedAnnualEnergy=12000.00, actualAnnualEnergy=10000.00, estimatedAnnualEnergyEarnings=100000.00, actualAnnualEnergyEarnings=80000.00, estimatedAnnualEnergyMinEarningsRate=0.10, estimatedAnnualEnergyMaxEarningsRate=0.20, totalEnergy=0.00, electricityPrice=0.50, energyTerm=99, residualEnergyTerm=98, constructionCompany=测试建设公司一, completedDate=Wed Jun 10 00:00:00 CST 2020, gridConnectedDate=Tue Jun 16 00:00:00 CST 2020, province=安徽省, city=合肥市, district=蜀山区, address=创新国际, longitude=null, latitude=null, componentTotal=99, componentSupplier=测试组件厂家一, componentModel=测试组件型号一, inverterSupplier=测试逆变器一, inverterModel=测试逆变器型号一, collectorSupplier=测试采集器厂家一, collectorModel=测试采集器型号一, assetId=57, coinType=null, putawaySerial=mCFEdfx6uQkPMHna, companyName=测试业主一, companyType=PRIVATE_COMPANY, companyAddress=哈哈地址, corpName=张三, corpCertType=PASSPORT, corpCertNo=342529199109890012, plantConstructionValue=120000.00, plantPresellValue=128009.00, plantDepreciationRate=0.87, plantFeature=高效、快捷、环保, description=佳俊坑爹啊载人, certFiles=1_1_29ab530c54a249508dc7174a754e228f.png,1_2_5303352446d547fa9c96283da8733c91.jpg,1_3_45d209b08a384881aa473e4c39eaf641.jpg, legalFiles=2_1_5e001ff6f2a24d23940e0e511f21775d.pdf, imgs=3_a60ee6bb889f4e899a98df647490c780.jpg,3_62a5c1e68ce54734a3166f5c71b99d7b.jpg,3_64cf634af0954b1d884e72b2a1eb9c6c.jpg,3_dab91d95ce464c5e97a082eea2ce45af.jpg, assetStatus=AUDITED, submitterId=3, submitterName=admin, submitTime=Mon Jun 29 23:45:35 CST 2020, auditorId=3, auditorName=admin, auditRemark=11rffwfewf, putawayTime=Mon Jun 29 23:47:10 CST 2020, deleted=false)
+2020/06/30 [http-nio-7001-exec-8] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, PlantAssetView(id=3436455351, psId=ps004, code=sn004, plantName=测试电站名称四, plantType=DISTRIBUTED_PHOTOVOLTAIC, plantStatus=ENABLED, installedPower=2345678.00, estimatedAnnualEnergy=12000.00, actualAnnualEnergy=10000.00, estimatedAnnualEnergyEarnings=100000.00, actualAnnualEnergyEarnings=80000.00, estimatedAnnualEnergyMinEarningsRate=0.10, estimatedAnnualEnergyMaxEarningsRate=0.20, totalEnergy=0.00, electricityPrice=0.50, energyTerm=99, residualEnergyTerm=98, constructionCompany=测试建设公司一, completedDate=Wed Jun 10 00:00:00 CST 2020, gridConnectedDate=Tue Jun 16 00:00:00 CST 2020, province=安徽省, city=合肥市, district=蜀山区, address=创新国际, longitude=null, latitude=null, componentTotal=99, componentSupplier=测试组件厂家一, componentModel=测试组件型号一, inverterSupplier=测试逆变器一, inverterModel=测试逆变器型号一, collectorSupplier=测试采集器厂家一, collectorModel=测试采集器型号一, assetId=57, coinType=null, putawaySerial=mCFEdfx6uQkPMHna, companyName=测试业主一, companyType=PRIVATE_COMPANY, companyAddress=哈哈地址, corpName=张三, corpCertType=PASSPORT, corpCertNo=342529199109890012, plantConstructionValue=120000.00, plantPresellValue=128009.00, plantDepreciationRate=0.87, plantFeature=高效、快捷、环保, description=佳俊坑爹啊载人, certFiles=1_1_29ab530c54a249508dc7174a754e228f.png,1_2_5303352446d547fa9c96283da8733c91.jpg,1_3_45d209b08a384881aa473e4c39eaf641.jpg, legalFiles=2_1_5e001ff6f2a24d23940e0e511f21775d.pdf, imgs=3_a60ee6bb889f4e899a98df647490c780.jpg,3_62a5c1e68ce54734a3166f5c71b99d7b.jpg,3_64cf634af0954b1d884e72b2a1eb9c6c.jpg,3_dab91d95ce464c5e97a082eea2ce45af.jpg, assetStatus=AUDITED, submitterId=3, submitterName=admin, submitTime=Mon Jun 29 23:45:35 CST 2020, auditorId=3, auditorName=admin, auditRemark=11rffwfewf, putawayTime=Mon Jun 29 23:47:10 CST 2020, deleted=false)
+2020/06/30 [http-nio-7001-exec-8] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: net.gichain.genergy.eam.common.JsonResult@6560eb77
+2020/06/30 [http-nio-7001-exec-9] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-9] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isAnnotationPresent(): true
+2020/06/30 [http-nio-7001-exec-9] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor required(): true
+2020/06/30 [http-nio-7001-exec-9] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-9] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-9] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor userId: 3
+2020/06/30 [http-nio-7001-exec-9] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExist: true
+2020/06/30 [http-nio-7001-exec-9] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-9] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired expiration: 2020-06-30 11:42:33
+2020/06/30 [http-nio-7001-exec-9] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired now: 2020-06-30 10:56:34
+2020/06/30 [http-nio-7001-exec-9] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired before: false
+2020/06/30 [http-nio-7001-exec-9] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExpired: false
+2020/06/30 [http-nio-7001-exec-9] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求IP：0:0:0:0:0:0:0:1
+2020/06/30 [http-nio-7001-exec-9] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求地址：http://localhost:7001/asset/page/1/10
+2020/06/30 [http-nio-7001-exec-9] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求方法：GET
+2020/06/30 [http-nio-7001-exec-9] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求类方法 : net.gichain.genergy.eam.admin.controller.AssetController.pageAssets
+2020/06/30 [http-nio-7001-exec-9] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求参数：[1, 10, null, null, null, null, null]
+2020/06/30 [http-nio-7001-exec-9] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page current, size: 1 10
+2020/06/30 [http-nio-7001-exec-9] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page putawaySerial,plantName,submitter,auditor,stauts: null null null null null
+2020/06/30 [http-nio-7001-exec-9] INFO  n.g.g.e.a.service.impl.PlantAssetViewServiceImpl - pageAssets queryParameters:com.baomidou.mybatisplus.core.conditions.query.QueryWrapper@1c2ce02c
+2020/06/30 [http-nio-7001-exec-9] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求耗时：17毫秒
+2020/06/30 [http-nio-7001-exec-9] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 响应值 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@7d5a235
+2020/06/30 [http-nio-7001-exec-9] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: com.baomidou.mybatisplus.extension.plugins.pagination.Page@7d5a235
+2020/06/30 [http-nio-7001-exec-9] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, com.baomidou.mybatisplus.extension.plugins.pagination.Page@7d5a235
+2020/06/30 [http-nio-7001-exec-9] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: net.gichain.genergy.eam.common.JsonResult@7c031f63
+2020/06/30 [http-nio-7001-exec-10] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-10] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isAnnotationPresent(): true
+2020/06/30 [http-nio-7001-exec-10] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor required(): true
+2020/06/30 [http-nio-7001-exec-10] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-10] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-10] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor userId: 3
+2020/06/30 [http-nio-7001-exec-10] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExist: true
+2020/06/30 [http-nio-7001-exec-10] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-10] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired expiration: 2020-06-30 11:42:33
+2020/06/30 [http-nio-7001-exec-10] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired now: 2020-06-30 10:56:47
+2020/06/30 [http-nio-7001-exec-10] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired before: false
+2020/06/30 [http-nio-7001-exec-10] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExpired: false
+2020/06/30 [http-nio-7001-exec-10] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求IP：0:0:0:0:0:0:0:1
+2020/06/30 [http-nio-7001-exec-10] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求地址：http://localhost:7001/asset/page/1/10
+2020/06/30 [http-nio-7001-exec-10] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求方法：GET
+2020/06/30 [http-nio-7001-exec-10] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求类方法 : net.gichain.genergy.eam.admin.controller.AssetController.pageAssets
+2020/06/30 [http-nio-7001-exec-10] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求参数：[1, 10, null, null, null, null, null]
+2020/06/30 [http-nio-7001-exec-10] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page current, size: 1 10
+2020/06/30 [http-nio-7001-exec-10] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page putawaySerial,plantName,submitter,auditor,stauts: null null null null null
+2020/06/30 [http-nio-7001-exec-10] INFO  n.g.g.e.a.service.impl.PlantAssetViewServiceImpl - pageAssets queryParameters:com.baomidou.mybatisplus.core.conditions.query.QueryWrapper@2b36ae61
+2020/06/30 [http-nio-7001-exec-10] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求耗时：15毫秒
+2020/06/30 [http-nio-7001-exec-10] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 响应值 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@5542b841
+2020/06/30 [http-nio-7001-exec-10] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: com.baomidou.mybatisplus.extension.plugins.pagination.Page@5542b841
+2020/06/30 [http-nio-7001-exec-10] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, com.baomidou.mybatisplus.extension.plugins.pagination.Page@5542b841
+2020/06/30 [http-nio-7001-exec-10] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: net.gichain.genergy.eam.common.JsonResult@4b19512e
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isAnnotationPresent(): true
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor required(): true
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor userId: 3
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExist: true
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired expiration: 2020-06-30 11:42:33
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired now: 2020-06-30 10:57:14
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired before: false
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExpired: false
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求IP：0:0:0:0:0:0:0:1
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求地址：http://localhost:7001/asset/page/1/10
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求方法：GET
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求类方法 : net.gichain.genergy.eam.admin.controller.AssetController.pageAssets
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求参数：[1, 10, null, null, null, null, null]
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page current, size: 1 10
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page putawaySerial,plantName,submitter,auditor,stauts: null null null null null
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.g.e.a.service.impl.PlantAssetViewServiceImpl - pageAssets queryParameters:com.baomidou.mybatisplus.core.conditions.query.QueryWrapper@719ee1de
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求耗时：27毫秒
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 响应值 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@767c5221
+2020/06/30 [http-nio-7001-exec-1] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: com.baomidou.mybatisplus.extension.plugins.pagination.Page@767c5221
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, com.baomidou.mybatisplus.extension.plugins.pagination.Page@767c5221
+2020/06/30 [http-nio-7001-exec-1] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: net.gichain.genergy.eam.common.JsonResult@3c9e6bef
+2020/06/30 [Thread-163] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2020/06/30 [restartedMain] INFO  n.g.genergy.eam.admin.GenergyEamAdminApplication - Starting GenergyEamAdminApplication on DESKTOP-VC4LELU with PID 14552 (D:\code\2020\genergy\genergy-eam\genergy-eam-admin\target\classes started by cjp in D:\code\2020\genergy\genergy-eam)
+2020/06/30 [restartedMain] DEBUG n.g.genergy.eam.admin.GenergyEamAdminApplication - Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020/06/30 [restartedMain] INFO  n.g.genergy.eam.admin.GenergyEamAdminApplication - The following profiles are active: dev
+2020/06/30 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7001 (http)
+2020/06/30 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020/06/30 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020/06/30 [restartedMain] INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020/06/30 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 799 ms
+2020/06/30 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020/06/30 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 7001 (http) with context path ''
+2020/06/30 [restartedMain] INFO  n.g.genergy.eam.admin.GenergyEamAdminApplication - Started GenergyEamAdminApplication in 3.303 seconds (JVM running for 1010.276)
+2020/06/30 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020/06/30 [http-nio-7001-exec-1] INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020/06/30 [http-nio-7001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020/06/30 [http-nio-7001-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isAnnotationPresent(): true
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor required(): true
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor userId: 3
+2020/06/30 [http-nio-7001-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} inited
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExist: true
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired expiration: 2020-06-30 11:42:33
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired now: 2020-06-30 10:58:12
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired before: false
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExpired: false
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求IP：0:0:0:0:0:0:0:1
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求地址：http://localhost:7001/asset/page/1/10
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求方法：GET
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求类方法 : net.gichain.genergy.eam.admin.controller.AssetController.pageAssets
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求参数：[1, 10, null, null, null, null, null]
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page current, size: 1 10
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page putawaySerial,plantName,submitter,auditor,stauts: null null null null null
+2020/06/30 [http-nio-7001-exec-1] INFO  n.g.g.e.a.service.impl.PlantAssetViewServiceImpl - pageAssets queryParameters:com.baomidou.mybatisplus.core.conditions.query.QueryWrapper@1540982
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求耗时：55毫秒
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 响应值 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@3d82878c
+2020/06/30 [http-nio-7001-exec-1] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: com.baomidou.mybatisplus.extension.plugins.pagination.Page@3d82878c
+2020/06/30 [http-nio-7001-exec-1] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, com.baomidou.mybatisplus.extension.plugins.pagination.Page@3d82878c
+2020/06/30 [http-nio-7001-exec-1] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: net.gichain.genergy.eam.common.JsonResult@5a7a931b
+2020/06/30 [http-nio-7001-exec-4] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-4] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isAnnotationPresent(): true
+2020/06/30 [http-nio-7001-exec-4] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor required(): true
+2020/06/30 [http-nio-7001-exec-4] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor token: eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTkzNDg4NTUzLCJpYXQiOjE1OTM0ODQ5NTMsInVzZXJuYW1lIjoiYWRtaW4ifQ.9FH3XvjwVckcJo7WYzgQuniN4toasIFftdOS71bwhNY
+2020/06/30 [http-nio-7001-exec-4] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-4] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor userId: 3
+2020/06/30 [http-nio-7001-exec-4] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExist: true
+2020/06/30 [http-nio-7001-exec-4] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.getClaim claims: {id=3, exp=1593488553, iat=1593484953, username=admin}
+2020/06/30 [http-nio-7001-exec-4] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired expiration: 2020-06-30 11:42:33
+2020/06/30 [http-nio-7001-exec-4] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired now: 2020-06-30 10:58:40
+2020/06/30 [http-nio-7001-exec-4] INFO  net.gichain.genergy.eam.common.util.JwtUtils - JwtUtils.isExpired before: false
+2020/06/30 [http-nio-7001-exec-4] INFO  n.g.genergy.eam.admin.interceptor.TokenInterceptor - TokenInterceptor isExpired: false
+2020/06/30 [http-nio-7001-exec-4] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求IP：0:0:0:0:0:0:0:1
+2020/06/30 [http-nio-7001-exec-4] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求地址：http://localhost:7001/asset/page/1/10
+2020/06/30 [http-nio-7001-exec-4] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求方法：GET
+2020/06/30 [http-nio-7001-exec-4] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求类方法 : net.gichain.genergy.eam.admin.controller.AssetController.pageAssets
+2020/06/30 [http-nio-7001-exec-4] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求参数：[1, 10, null, null, null, null, null]
+2020/06/30 [http-nio-7001-exec-4] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page current, size: 1 10
+2020/06/30 [http-nio-7001-exec-4] INFO  n.g.genergy.eam.admin.controller.AssetController - /asset/page putawaySerial,plantName,submitter,auditor,stauts: null null null null null
+2020/06/30 [http-nio-7001-exec-4] INFO  n.g.g.e.a.service.impl.PlantAssetViewServiceImpl - pageAssets queryParameters:com.baomidou.mybatisplus.core.conditions.query.QueryWrapper@685fc0fb
+2020/06/30 [http-nio-7001-exec-4] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 请求耗时：59毫秒
+2020/06/30 [http-nio-7001-exec-4] INFO  net.gichain.genergy.eam.common.aspect.LogAspect - 响应值 : com.baomidou.mybatisplus.extension.plugins.pagination.Page@6cd6109e
+2020/06/30 [http-nio-7001-exec-4] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite body: com.baomidou.mybatisplus.extension.plugins.pagination.Page@6cd6109e
+2020/06/30 [http-nio-7001-exec-4] INFO  net.gichain.genergy.eam.common.JsonResult - JsonResult: 0, 操作成功, com.baomidou.mybatisplus.extension.plugins.pagination.Page@6cd6109e
+2020/06/30 [http-nio-7001-exec-4] INFO  n.gichain.genergy.eam.common.advice.ResponseAdvice - ResponseAdvice.beforeBodyWrite result: net.gichain.genergy.eam.common.JsonResult@f10080a
