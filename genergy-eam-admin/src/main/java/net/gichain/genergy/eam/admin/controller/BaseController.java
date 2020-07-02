@@ -1,12 +1,14 @@
 package net.gichain.genergy.eam.admin.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import net.gichain.genergy.eam.common.exception.TokenException;
-import net.gichain.genergy.eam.common.util.JwtUtils;
+import net.gichain.genergy.eam.admin.util.JwtUtils;
 import net.gichain.genergy.eam.common.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpServletRequest;
 
+@Slf4j
 public class BaseController {
     @Autowired
     private HttpServletRequest httpRequest;
@@ -22,7 +24,13 @@ public class BaseController {
             return null;
         }
 
+        log.info(String.format("BaseController getToken: %s", token));
         return token;
+    }
+
+    public boolean isExpired() throws TokenException {
+        String token = this.getToken();
+        return JwtUtils.isExpired(token);
     }
 
     public Integer getUserId() throws TokenException {
@@ -30,8 +38,8 @@ public class BaseController {
         return JwtUtils.getUserId(token);
     }
 
-    public boolean isExpired() throws TokenException {
+    public String getUUID() throws TokenException {
         String token = this.getToken();
-        return JwtUtils.isExpired(token);
+        return JwtUtils.getUUID(token);
     }
 }

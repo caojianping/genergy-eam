@@ -34,6 +34,15 @@ spring:
     url: jdbc:mysql://172.18.10.78:3306/genergy_eam?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2b8
     username: root
     password: 6x@test2018
+  redis:
+    host: 172.18.10.78
+    port: 6379
+    password: gChain@redis2019
+    timeout: 30000
+    lettuce:
+      pool:
+        min-idle: 4
+        max-idle: 10
   servlet:
     multipart:
       max-file-size: 10MB
