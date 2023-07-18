@@ -1,9 +1,0 @@
-syntax = "proto3";
-
-option java_multiple_files = true;
-
-package net.gichain.genergy.eam.grpc.lib;
-
-message AssetIdRequest {
-    int64 assetId = 1; // 资产编号
-}

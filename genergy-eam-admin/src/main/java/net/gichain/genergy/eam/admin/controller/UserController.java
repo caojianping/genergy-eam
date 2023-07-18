@@ -11,6 +11,9 @@ import net.gichain.genergy.eam.admin.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 @Slf4j
 @RequestMapping("/user")
 @RestController
@@ -60,5 +63,9 @@ public class UserController extends BaseController {
     public boolean removeUser(@PathVariable(name = "id") int id) {
         log.info(String.format("/user/remove id: %d", id));
         return userService.removeUser(id);
+    }
+
+    public void testRedirect(HttpServletResponse response) throws IOException {
+        response.sendRedirect("http://www.baidu.com");
     }
 }

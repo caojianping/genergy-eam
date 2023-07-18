@@ -87,7 +87,7 @@ public class AccountController extends BaseController {
      * 处理token
      *
      * @param id       编号
-     * @param username 用户名
+     * @param username 用户名61
      * @return
      */
     private String handleToken(int id, String username) {
